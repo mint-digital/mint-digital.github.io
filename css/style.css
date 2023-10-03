@@ -18,13 +18,23 @@
 
 html {
   height: 100%;
+  scrollbar-width: none;
 }
 
+/*body:hover {
+  overflow: auto;
+  padding-right: 1px;
+}*/
+
 body {
-  overflow: hidden;
+  /*overflow: hidden;*/
   background-color: var(--primary-color);
   height: 100%;
   /*border: 3px solid green;*/
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 .grid-3-cols {
