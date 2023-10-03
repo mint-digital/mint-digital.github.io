@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #7eac97;
+  --secondary-color: #b7dccb;
+  --primary-text-color: white;
+  --primary-text-bg-color: #2c4857;
+  --secondary-text-color: #2c4857;
+  --secondary-text-bg-color: #b7dccb;
+}
+
+body {
+  background-color: var(--primary-color);
+  border-collapse: collapse;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 300px 100px;
+  /*border: 3px solid green;*/
+}
+
+.container-side {
+  width: auto;
+}
+
+.logo {
+  display: inline;
+  font-family: "Modak";
+  font-size: 130pt;
+  font-weight: 400;
+  line-height: 1;
+  text-align: start;
+  color: var(--primary-text-color);
+}
+
+.leaf {
+  width: 140px;
+  height: 150px;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top;
+}
+
+.container-middle {
+  min-width: 600px;
+  max-width: 1100px;
+  padding: 30px;
+  margin: auto;
+  width: auto;
+  /*border: 3px solid green;*/
+}
+
+.centered {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /*border: 3px solid green;*/
+}
+
+/*&::before {
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  margin-top: calc((1 - 1.2em) * 0.5em);
+}*/
+
+.button {
+  display: inline-block;
+  background-color: var(--primary-text-bg-color);
+  margin: 0;
+  padding: 20px;
+  border-radius: 25px;
+  font-family: "Patua One";
+  font-weight: 400;
+  font-size: 18pt;
+  vertical-align: top;
+  color: var(--primary-text-color);
+}
+
+.button:hover {
+  background-color: var(--secondary-text-bg-color);
+  color: var(--secondary-text-color);
+}
