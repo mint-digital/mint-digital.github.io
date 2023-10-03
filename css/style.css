@@ -31,7 +31,7 @@ body {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-columns: auto 70% auto;
+  grid-template-columns: auto max(42em, 80%) auto;
   /*border: 3px solid green;*/
 }
 
@@ -70,8 +70,8 @@ body {
   flex-direction: column;
   gap: 1em;
   margin-top: 1em;
-  min-width: 48em;
-  max-width: 80em;
+  min-width: 38em;
+  /*max-width: 90em;*/
   padding: 2em;
   /*border: 3px solid green;*/
 }
@@ -101,8 +101,10 @@ body {
   font-weight: normal;
   font-size: 1.3rem;
   padding: 1em;
-  width: 24em;
-  max-width: 14em;
+  min-width: 12em;
+  width: 20em;
+  max-width: 34em;
+  flex-grow: 2;
   color: black;
 }
 
