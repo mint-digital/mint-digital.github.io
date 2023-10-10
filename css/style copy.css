@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #7eac97;
+  --secondary-color: #b7dccb;
+  --primary-text-color: white;
+  --primary-text-bg-color: #2c4857;
+  --secondary-text-color: #2c4857;
+  --secondary-text-bg-color: #b7dccb;
+  --gradient-black-to-primary: 
+    linear-gradient(90deg, black 0%, var(--primary-text-bg-color) 55%, var(--primary-color) 100%);
+  --gradient-primary-to-black: 
+    linear-gradient(270deg, black 0%, var(--primary-text-bg-color) 55%, var(--primary-color) 100%);
+  --gradient-primary-to-black-bg: linear-gradient(to bottom, black 0%, var(--primary-text-bg-color) 55%, var(--primary-color) 100%);
+}
+
+html {
+  scrollbar-width: none;
+}
+
+/*body:hover {
+  overflow: auto;
+  padding-right: 1px;
+}*/
+
+body {
+  /*overflow: hidden;*/
+  /*background: var(--gradient-primary-to-black-bg);
+  background-attachment: fixed;*/
+  height: 100%;
+  background-color: var(--primary-color);
+  /*border: 3px solid green;*/
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+header {
+
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  width: 100%;
+  /*padding-bottom: 2em;
+  padding-top: 2em;*/
+  background-image: url("/img/frosty-header2.jpeg");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: auto max(42em, 80%) auto;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.25) 65%, rgba(0,0,0,.75) 100%);
+  padding-top: 2em;
+}
+
+.container-top-left {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  /*background: var(--gradient-primary-to-black-bg);*/
+}
+
+.container-top-right {
+  width: auto;
+
+  /*background: var(--gradient-primary-to-black-bg);*/
+}
+
+.grid-3-cols {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: auto max(42em, 80%) auto;
+  background: var(--gradient-primary-to-black-bg);/*ar(--primary-color);*/
+  /*background-attachment: fixed;*/
+  /*border: 3px solid green;*/
+}
+
+.container-left {
+  width: auto;
+  /*background: var(--gradient-primary-to-black-bg);*/
+}
+
+.container-right {
+  width: auto;
+  /*background: var(--gradient-primary-to-black-bg);*/
+}
+
+.icon-and-logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  display: inline;
+  font-family: "Modak";
+  font-size: 11rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: start;
+  /*-webkit-text-stroke: 2px black;*/
+  /*text-decoration-line: underline;*/
+  color: var(--primary-text-color);
+}
+
+.logo-img {
+  display: inline;
+  height: 9em;
+}
+
+.slogan {
+  font-family: "Orelega One";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  color: white;
+  margin-top: -0.2em;
+  padding-left: 5em;
+  /*position: absolute;
+  top: 6em;
+  left: 9em;*/
+}
+
+.leaf {
+  display: inline;
+  width: 10rem;
+  height: 10rem;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top;
+}
+
+.container-middle {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3em;
+  margin-top: 0em;
+  min-width: 38em;
+  /*max-width: 90em;*/
+  padding: 0em;
+  /*border: 3px solid green;*/
+}
+
+.flex-wrapper {
+  margin: 0;
+  padding: 0;
+  margin-top: 2.2em;
+  /*width: 100%;*/
+  text-align: center;
+  /*border: 3px solid green;*/
+}
+
+.card-flex {
+  display: flex;
+  /*flex-direction: row;*/
+  column-gap: 5em;
+  row-gap: 4em;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 3em;
+}
+
+.card {
+  background-color: white; /*var(--secondary-color);*/
+  border-radius: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+/*  padding: 1em;*/
+  min-width: 12em;
+  width: 20em;
+  max-width: 34em;
+  flex-grow: 2;
+  color: black;
+  box-shadow: 0 12px 12px 0 rgba(1,0,0,0.2);
+  transition: 0.3s;
+  position: relative;
+  text-align: left;
+}
+
+.card p {
+  padding: 1em;
+}
+
+.card-image {
+  width: 100%;
+  height: 10em;
+  object-fit: cover;
+  border-radius: 1em 1em 0 0;
+}
+
+.upper-card {
+  background-color: red;
+  margin: 0px;
+  padding: 0px;
+}
+
+.card-header {
+  font-family: "Orelega One";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  margin: .3em;
+  padding: 0.1em;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  background-color: white;
+}
+
+/*&::before {
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  margin-top: calc((1 - 1.2em) * 0.5em);
+}*/
+
+
+.button {
+  display: inline;
+  background-color: var(--primary-text-bg-color);
+  margin: 0;
+  padding: .7em;
+  border-radius: 25px;
+  font-family: "Patua One";
+  font-weight: 400;
+  font-size: 2em;
+  vertical-align: top;
+  color: var(--primary-text-color);
+}
+
+.button:hover {
+  background-color: var(--secondary-text-bg-color);
+  color: var(--secondary-text-color);
+}
+
+footer {
+  font-family: "Patua One";
+  font-weight: 400;
+  font-size: 1.2em;
+  color: white;
+  padding: 3em;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.contact {
+  /*display: flex;*/
+  padding: 1em;
+}
+
+.contact a {
+  color: white;
+}
