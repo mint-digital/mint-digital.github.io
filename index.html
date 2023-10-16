@@ -11,6 +11,18 @@
 </head>
 <body>
   <script>
+    const contentful = require('contentful')
+
+    const client = contentful.createClient({
+      space: '8s1ond3x79i6',
+      environment: 'master', // defaults to 'master' if not set
+      accessToken: 'Gy4EpZZUYaap3SDFhZyIR_iCYJW4tlYR0mBB2SytqaY'
+    })
+
+    client.getEntry('5IsIZ1s4FLEs32ThAlV94X')
+      .then((entry) => console.log(entry))
+      .catch(console.error)
+
   </script>
   <header class="icon-and-logo">
     <div class="logo-container">
