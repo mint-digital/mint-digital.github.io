@@ -5,14 +5,18 @@ export default function Cards({
 }: {
   cards
 }) {
-  let cs = cards.items.map((c) => {
+  let cs = cards.items.map((c, idx) => {
     console.log(c);
     const cardProps = { 
-      image_url: "https:" + c.fields.titleImage.fields.file.url,
+      image_url: c.fields.titleImage != null ? "https:" + c.fields.titleImage.fields.file.url : null,
       ...c.fields
     };
-    return Card(cardProps);
+    return (
+      <li key={idx}> 
+        <Card {...cardProps} />
+      </li>
+    );
   });
   console.log("cs: " + cs);
-  return cs;
+  return (<ul>{cs}</ul>);
 }
