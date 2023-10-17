@@ -9,6 +9,9 @@ export default function Card({
   abstract: string,
   image_url: string
 }) {
+  console.log("title; " + title);
+  console.log("abstract: " + abstract);
+  console.log("img: " + image_url);
 	return (
 		<>
       <h1>{title}</h1>

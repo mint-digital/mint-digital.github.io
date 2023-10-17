@@ -5,12 +5,14 @@ export default function Cards({
 }: {
   cards
 }) {
-  console.log(cards)
-  const card = cards.items[0];
-  console.log(card);
-  const cardProps = { 
-    image_url: "https:" + card.fields.titleImage.fields.file.url,
-    ...cards.fields
-  };
-	return Card(cardProps);
+  let cs = cards.items.map((c) => {
+    console.log(c);
+    const cardProps = { 
+      image_url: "https:" + c.fields.titleImage.fields.file.url,
+      ...c.fields
+    };
+    return Card(cardProps);
+  });
+  console.log("cs: " + cs);
+  return cs;
 }
