@@ -13,7 +13,12 @@ export const fetchCards = async () => {
     .getEntries({
       content_type: 'articleCard'
     })
-    .then((response) => response)
+    .then((response) => {
+      response.items.sort((a, b) => {
+        return (a.fields.order as number) - (b.fields.order as number)
+      });
+      return response;
+    })
     .catch((err) => console.log(err));
   return entries;
 };

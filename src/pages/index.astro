@@ -10,13 +10,18 @@ const cards = { cards: await fetchCards() };
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+		<style>
+			@import url('../Common.css');
+		</style>
 		<style>
 			html,
 			body {
-				font-family: system-ui;
+				font-family: 'Lato';
 				margin: 0;
-			}
-			body {
+				font-size: 16px;
 				padding: 2rem;
 			}
 		</style>
