@@ -28,7 +28,8 @@ export default function Card({
     display: "flex",
   };
   const txtCellStyle = {
-    padding: "5rem"
+    padding: "5rem",
+    flexGrow: "1",
   };
   const titleStyle = {
     color: textColor.value,
@@ -48,6 +49,8 @@ export default function Card({
     width: "28ch",
   };
   const imgCellStyle = {
+    flexGrow: "1",
+    width: "50%",
     maxWidth: "50%",
   };
   const imgStyle = {
