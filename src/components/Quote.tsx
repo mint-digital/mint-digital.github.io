@@ -12,10 +12,10 @@ export default function Quote({
   backgroundColor,
   textColor
 }) {
-  console.log("title; " + title);
-  console.log("abstract: " + abstract);
-  console.log("backgroundColor: " + backgroundColor.value);
-  console.log("textColor: " + textColor.value);
+  //console.log("title; " + title);
+  //console.log("abstract: " + abstract);
+  //console.log("backgroundColor: " + backgroundColor.value);
+  //console.log("textColor: " + textColor.value);
 
   const entryStyle = {
     display: "flex",

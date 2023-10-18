@@ -13,11 +13,11 @@ export default function Card({
   backgroundColor,
   textColor
 }) {
-  console.log("title; " + title);
-  console.log("abstract: " + abstract);
-  console.log("img: " + image_url);
-  console.log("backgroundColor: " + backgroundColor.value);
-  console.log("textColor: " + textColor.value);
+  //console.log("title; " + title);
+  //console.log("abstract: " + abstract);
+  //console.log("img: " + image_url);
+  //console.log("backgroundColor: " + backgroundColor.value);
+  //console.log("textColor: " + textColor.value);
 
   const entryStyle = {
     backgroundColor: backgroundColor.value,

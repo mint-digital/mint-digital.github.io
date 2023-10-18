@@ -1,7 +1,11 @@
 ---
 import Cards from '../components/Cards';
-import { fetchCards } from '../utils/contentful';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { fetchCards, fetchHeader, fetchFooter } from '../utils/contentful';
 const cards = { cards: await fetchCards() };
+const headProps = { headProps: await fetchHeader() };
+//const footProps = { footProps: await fetchFooter() };
 ---
 
 <html lang="en">
@@ -30,8 +34,9 @@ const cards = { cards: await fetchCards() };
   </script>
 	<body>
 		<main>
-			<Cards {...cards} client:visible>
-      </Cards>
+			<Header {...headProps} client:visible />
+			<Cards {...cards} client:visible />
+			<!-- <Footer {...footProps.fields} client:visible /> -->
 		</main>
 	</body>
 </html>

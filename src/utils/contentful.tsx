@@ -9,7 +9,6 @@ const client = createClient({
 export const fetchCards = async () => {
   const entries = await 
     client
-//    .getEntry('17dbPdw0uOJQY2MTvE1xxC')
     .getEntries({
       content_type: 'articleCard'
     })
@@ -22,3 +21,27 @@ export const fetchCards = async () => {
     .catch((err) => console.log(err));
   return entries;
 };
+
+export const fetchHeader = async () => {
+  return await 
+    client
+    .getEntry('4y2uK77TPXoBl269kWOsgW')
+    .then((response) => {
+//      console.log("fetch " + JSON.stringify(response));
+      return response.fields;
+    })
+    .catch((err) => console.log(err));
+};
+
+export const fetchFooter = async () => {
+  return await 
+    client
+    .getEntry('2u6Kwb5BgzdCoO909tEE5E')
+    .then((response) => {
+      //      console.log("fetch " + JSON.stringify(response));
+      return response.fields;
+    })
+    .catch((err) => console.log(err));
+};
+
+

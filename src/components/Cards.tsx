@@ -7,7 +7,7 @@ export default function Cards({
   cards
 }) {
   let cs = cards.items.map((c, idx) => {
-    console.log(c);
+  //  console.log(c);
     const cardProps = { 
       image_url: c.fields.titleImage != null ? "https:" + c.fields.titleImage.fields.file.url : null,
       ...c.fields
@@ -24,7 +24,7 @@ export default function Cards({
       </li>
     );
   });
-  console.log("cs: " + cs);
+  //console.log("cs: " + cs);
 
   const ulStyle = {
     maxWidth: "1400px",
