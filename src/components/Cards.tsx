@@ -16,6 +16,7 @@ export default function Cards({
     if(cardProps.image_url) {
       elem = <Card {...cardProps} /> 
     } else {
+      //console.log(JSON.stringify(cardProps))
       elem = <Quote {...cardProps} />
     }
     return (

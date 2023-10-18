@@ -9,7 +9,7 @@ export default function Footer({
   backgroundColor,
   textColor,
 }) {
-  console.log("title; " + title);
+  //console.log("title; " + title);
 
   const entryStyle = {
 //    backgroundColor: backgroundColor.value,

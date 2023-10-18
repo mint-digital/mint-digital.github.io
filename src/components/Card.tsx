@@ -46,7 +46,8 @@ export default function Card({
     padding: "0 2rem 0",
     fontSize: "1.25rem",
     fontWeight: "400",
-    width: "28ch",
+    width: "34ch",
+    textWrap: "balance",
   };
   const imgCellStyle = {
     flexGrow: "1",

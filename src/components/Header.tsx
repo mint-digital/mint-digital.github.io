@@ -3,12 +3,12 @@ export default function Header({
 }: {
   headProps,
 }) {
-  console.log("asdf " + JSON.stringify(headProps));
-  console.log("header; " + headProps.headline);
-  console.log("subheader: " + headProps.subHeader);
-  console.log("bgColor: " + headProps.backgroundColor.value);
-  console.log("txtColor: " + headProps.textColor.value);
-  console.log("bgImg: " + headProps.backgroundImage.fields.file.url);
+  //console.log("asdf " + JSON.stringify(headProps));
+  //console.log("header; " + headProps.headline);
+  //console.log("subheader: " + headProps.subHeader);
+  //console.log("bgColor: " + headProps.backgroundColor.value);
+  //console.log("txtColor: " + headProps.textColor.value);
+  //console.log("bgImg: " + headProps.backgroundImage.fields.file.url);
 
   // const entryStyle = {
   //   display: "block",
@@ -27,7 +27,7 @@ export default function Header({
 //    backgroundRepeat: "round",
     backgroundSize: "cover",
     padding: 0,
-    height: "28rem",
+    height: "32rem",
     width: "100%",
     maxWidth: "1400px",
   };
@@ -47,8 +47,8 @@ export default function Header({
     color: headProps.textColor.value,
     padding: "0 auto 0",
     margin: "0 auto 0",
-    fontSize: "4rem",
-    lineHeight: "4rem",
+    fontSize: "4.5rem",
+    lineHeight: "5rem",
     fontWeight: "700",
     fontStyle: "bold",
     width: "10ch",
