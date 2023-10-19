@@ -5,15 +5,14 @@ import Footer from '../components/Footer';
 import { fetchCards, fetchHeader, fetchFooter } from '../utils/contentful';
 const cards = { cards: await fetchCards() };
 const headProps = { headProps: await fetchHeader() };
-//const footProps = { footProps: await fetchFooter() };
+const footProps = { footProps: await fetchFooter() };
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content={Astro.generator} />
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -43,7 +42,7 @@ const headProps = { headProps: await fetchHeader() };
 		<main style="display: flex; flex-direction: column; align-items: center; justify-items: center;">
 			<Header {...headProps} client:visible />
 			<Cards {...cards} client:visible />
-			<!-- <Footer {...footProps.fields} client:visible /> -->
+			<Footer {...footProps} client:visible />
 		</main>
 	</body>
 </html>

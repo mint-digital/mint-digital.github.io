@@ -1,17 +1,20 @@
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import './Card.css';
 
 export default function Card({
   title,
-  abstract,
+  text,
   image_url,
   backgroundColor,
-  textColor
+  textColor,
+  alignImageRight,
 }: {
   title: string,
-  abstract: string,
+  text,
   image_url: string,
   backgroundColor,
-  textColor
+  textColor,
+  alignImageRight,
 }) {
   //console.log("title; " + title);
   //console.log("abstract: " + abstract);
@@ -22,7 +25,6 @@ export default function Card({
   const entryStyle = {
     backgroundColor: backgroundColor.value,
     padding: 0,
-//    height: "30rem"
   };
   const rowStyle = {
     display: "flex",
@@ -44,7 +46,7 @@ export default function Card({
   const abstractStyle = {
     color: textColor.value,
     padding: "0 2rem 0",
-    fontSize: "1.25rem",
+    fontSize: "1.5rem",
     fontWeight: "400",
     width: "34ch",
     textWrap: "balance",
@@ -57,24 +59,40 @@ export default function Card({
   const imgStyle = {
     width: "100%",
     height: "100%",
-//    objectFit: "contain" as "contain",
     objectFit: "cover" as "cover",
-//    aspectRatio: "1 / 1",
   };
 
-	return (
-    <section style={entryStyle}>
-      <div style={rowStyle}>
-        <span style={imgCellStyle}>
-          <img style={imgStyle} src={image_url}></img>
-        </span>
-        <span style={txtCellStyle}>
-          <h1 style={titleStyle}>{title}</h1>
-          <div>
-            <p style={abstractStyle}>{abstract}</p>
-          </div>
-        </span>
-      </div>
-    </section>
-	);
+  if(alignImageRight) {
+    return (
+      <section style={entryStyle}>
+        <div style={rowStyle}>
+          <span style={txtCellStyle}>
+            <h1 style={titleStyle}>{title}</h1>
+            <div>
+              <p style={abstractStyle}>{documentToReactComponents(text)}</p>
+            </div>
+          </span>
+          <span style={imgCellStyle}>
+            <img style={imgStyle} src={image_url}></img>
+          </span>
+        </div>
+      </section>
+    );
+  } else {
+    return (
+      <section style={entryStyle}>
+        <div style={rowStyle}>
+          <span style={imgCellStyle}>
+            <img style={imgStyle} src={image_url}></img>
+          </span>
+          <span style={txtCellStyle}>
+            <h1 style={titleStyle}>{title}</h1>
+            <div>
+              <p style={abstractStyle}>{documentToReactComponents(text)}</p>
+            </div>
+          </span>
+        </div>
+      </section>
+    );
+  }
 }
