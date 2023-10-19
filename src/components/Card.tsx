@@ -44,6 +44,7 @@ export default function Card({
     width: "10ch",
   };
   const abstractStyle = {
+    display: "block",
     color: textColor.value,
     padding: "0 2rem 0",
     fontSize: "1.5rem",
@@ -69,7 +70,7 @@ export default function Card({
           <span style={txtCellStyle}>
             <h1 style={titleStyle}>{title}</h1>
             <div>
-              <p style={abstractStyle}>{documentToReactComponents(text)}</p>
+              <span style={abstractStyle}>{documentToReactComponents(text)}</span>
             </div>
           </span>
           <span style={imgCellStyle}>
@@ -88,7 +89,7 @@ export default function Card({
           <span style={txtCellStyle}>
             <h1 style={titleStyle}>{title}</h1>
             <div>
-              <p style={abstractStyle}>{documentToReactComponents(text)}</p>
+              <span style={abstractStyle}>{documentToReactComponents(text)}</span>
             </div>
           </span>
         </div>

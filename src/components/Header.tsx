@@ -37,7 +37,7 @@ export default function Header({
     color: headProps.textColor.value,
     padding: "0 auto 0",
     margin: "0 auto 0",
-    fontSize: "4.5rem",
+    fontSize: "5rem",
     lineHeight: "5rem",
     fontWeight: "700",
     fontStyle: "bold",
