@@ -16,7 +16,7 @@ export default function Header({
     backgroundColor: headProps.backgroundColor.value,
     backgroundImage: "url(" + headProps.backgroundImage.fields.file.url + ")",
     backgroundSize: "cover",
-    padding: 0,
+    padding: "0 0 4rem 0",
     margin: 0,
     height: "32rem",
     width: "100%",
@@ -36,7 +36,7 @@ export default function Header({
   };
   const titleStyle = {
     color: headProps.textColor.value,
-    padding: "0 auto 0",
+    padding: "0 auto 3rem 0",
     margin: "0 auto 0",
     fontSize: "5rem",
     lineHeight: "5rem",
