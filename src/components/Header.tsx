@@ -56,7 +56,7 @@ export default function Header({
 
 	return (
     <div style={rowStyle}>
-      <img style={imgStyle} src="../img/mint_logo_v1_light.png" />
+      <img style={imgStyle} src="img/mint_logo_v1_light.png" />
       <span style={txtCellStyle}>
         <h1 style={titleStyle}>{headProps.headline}</h1>
         <div>
