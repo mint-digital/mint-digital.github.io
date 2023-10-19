@@ -17,6 +17,7 @@ export default function Header({
     backgroundImage: "url(" + headProps.backgroundImage.fields.file.url + ")",
     backgroundSize: "cover",
     padding: 0,
+    margin: 0,
     height: "32rem",
     width: "100%",
     maxWidth: "1400px",

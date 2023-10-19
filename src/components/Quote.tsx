@@ -26,6 +26,8 @@ export default function Quote({
     backgroundColor: backgroundColor.value,
     alignItems: "center" as "center",
     justifyContent: "center" as "center",
+    padding: 0,
+    margin: 0,
   };
   const titleStyleCentered = {
     color: textColor.value,
@@ -34,6 +36,7 @@ export default function Quote({
     fontStyle: "bold",
     fontWeight: "700",
     margin: "4rem 0 0",
+    padding: "2rem 3rem 0 3rem",
     maxWidth: "22ch",
     minWidth: "16ch",
   };
@@ -44,8 +47,8 @@ export default function Quote({
     fontStyle: "italic",
     fontWeight: "400",
     margin: "0rem 2rem 2rem",
+    padding: "2rem",
     maxWidth: "58rem",
-    padding: "auto",
   };
   const abstractStyleCentered = {
     color: textColor.value,

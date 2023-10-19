@@ -25,6 +25,7 @@ export default function Card({
   const entryStyle = {
     backgroundColor: backgroundColor.value,
     padding: 0,
+    margin: 0,
   };
   const rowStyle = {
     display: "flex",
@@ -41,7 +42,7 @@ export default function Card({
     lineHeight: "4rem",
     fontWeight: "700",
     fontStyle: "bold",
-    width: "10ch",
+    maxWidth: "10ch",
   };
   const abstractStyle = {
     display: "block",
@@ -49,7 +50,7 @@ export default function Card({
     padding: "0 2rem 0",
     fontSize: "1.5rem",
     fontWeight: "400",
-    width: "34ch",
+    maxWidth: "34ch",
     textWrap: "balance",
   };
   const imgCellStyle = {
