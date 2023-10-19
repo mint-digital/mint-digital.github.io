@@ -41,7 +41,7 @@ export default function Header({
     lineHeight: "5rem",
     fontWeight: "700",
     fontStyle: "bold",
-    width: "10ch",
+    maxWidth: "10ch",
   };
   const subheaderStyle = {
     color: headProps.textColor.value,
