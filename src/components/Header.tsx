@@ -20,7 +20,7 @@ export default function Header({
     backgroundImage: "url(" + headProps.backgroundImage.fields.file.url + ")",
     //backgroundSize: "contain",
     backgroundSize: "cover",
-    backgroundPosition: "center center",
+    backgroundPosition: "center top",
     //backgroundSize: "100% auto",
     //backgroundRepeat: "no-repeat",
     //backgroundPosition: "0 -250px",
