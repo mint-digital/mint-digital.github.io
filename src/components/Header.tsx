@@ -1,3 +1,6 @@
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import styles from './Header.module.css'; 
+
 export default function Header({
   headProps,
 }: {
@@ -8,16 +11,19 @@ export default function Header({
   //console.log("subheader: " + headProps.subHeader);
   //console.log("bgColor: " + headProps.backgroundColor.value);
   //console.log("txtColor: " + headProps.textColor.value);
-  console.log("bgImg: " + headProps.backgroundImage.fields.file.url);
+  //console.log("bgImg: " + headProps.backgroundImage.fields.file.url);
 
   const rowStyle = {
     display: "flex",
     flexDirection: "column" as "column",
     backgroundColor: headProps.backgroundColor.value,
     backgroundImage: "url(" + headProps.backgroundImage.fields.file.url + ")",
-    backgroundSize: "cover",
-    backgroundPosition: "0 -250px",
-    padding: "0 0 4rem 0",
+    //backgroundSize: "contain",
+    //backgroundSize: "cover",
+    backgroundSize: "100% auto",
+    //backgroundRepeat: "no-repeat",
+    //backgroundPosition: "0 -250px",
+    padding: "0 0 3rem 0",
     margin: 0,
     height: "32rem",
     width: "100%",
@@ -38,20 +44,20 @@ export default function Header({
   const titleStyle = {
     color: headProps.textColor.value,
     padding: "0 auto 3rem 0",
-    margin: "0 auto 0",
+    margin: "0 auto 3rem",
     fontSize: "5rem",
     lineHeight: "5rem",
     fontWeight: "700",
     fontStyle: "bold",
     maxWidth: "10ch",
   };
-  const subheaderStyle = {
+  const subHeadlineStyle = {
     color: headProps.textColor.value,
     padding: "0",
-    margin: "2rem auto 0",
+    margin: "0rem auto 0",
     fontSize: "1.25rem",
     fontWeight: "400",
-    width: "48ch",
+    width: "ch",
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
   };
@@ -62,7 +68,7 @@ export default function Header({
       <span style={txtCellStyle}>
         <h1 style={titleStyle}>{headProps.headline}</h1>
         <div>
-          <p style={subheaderStyle}>{headProps.subHeader}</p>
+          <p style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline)}</p>
         </div>
       </span>
     </div>
