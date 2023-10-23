@@ -8,7 +8,7 @@ export default function Header({
   //console.log("subheader: " + headProps.subHeader);
   //console.log("bgColor: " + headProps.backgroundColor.value);
   //console.log("txtColor: " + headProps.textColor.value);
-  //console.log("bgImg: " + headProps.backgroundImage.fields.file.url);
+  console.log("bgImg: " + headProps.backgroundImage.fields.file.url);
 
   const rowStyle = {
     display: "flex",
@@ -16,6 +16,7 @@ export default function Header({
     backgroundColor: headProps.backgroundColor.value,
     backgroundImage: "url(" + headProps.backgroundImage.fields.file.url + ")",
     backgroundSize: "cover",
+    backgroundPosition: "0 -250px",
     padding: "0 0 4rem 0",
     margin: 0,
     height: "32rem",
