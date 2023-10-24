@@ -82,12 +82,12 @@ export default function Card({
     display: "flex",
   };
   const txtCellStyle = {
-    padding: "5rem",
+    padding: "5rem 7rem 5rem 7rem",
     flexGrow: "1",
   };
   const titleStyle = {
     color: textColor.value,
-    padding: "0 2rem 0",
+    padding: "0 0rem 0",
     margin: "2rem 0",
     fontSize: "4rem",
     lineHeight: "4rem",
@@ -98,7 +98,7 @@ export default function Card({
   const abstractStyle = {
     display: "block",
     color: textColor.value,
-    padding: "0 2rem 0",
+    padding: "0 0rem 2rem 0",
     fontSize: "1.75rem",
     fontWeight: "400",
     maxWidth: "34ch",
@@ -113,6 +113,7 @@ export default function Card({
     width: "100%",
     height: "100%",
     objectFit: "cover" as "cover",
+    transformOrigin: "top center",
   };
 
   if(alignImageRight) {

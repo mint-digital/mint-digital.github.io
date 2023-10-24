@@ -77,7 +77,7 @@ export default function Quote({
     alignItems: "center" as "center",
     backgroundColor: backgroundColor.value,
     justifyContent: "center" as "center",
-    padding: "5rem",
+    padding: "5rem 7rem 5rem 7rem",
     margin: 0,
   };
   const textContainerStyle = {
@@ -94,7 +94,7 @@ export default function Quote({
     fontWeight: "700",
     lineHeight: "4rem",
     margin: "0",
-    padding: "0 2rem 0 2rem",
+    padding: "2rem 0rem 0 0rem",
     //maxWidth: "22ch",
     //minWidth: "16ch",
   };
@@ -106,7 +106,7 @@ export default function Quote({
     fontWeight: "400",
     margin: "0",
     width: "32rem",
-    padding: "0 2rem 0 2rem",
+    padding: "2rem 0rem 2rem 0rem",
 //    padding: "auto",
   };
   const paragraphStyle = {
@@ -116,7 +116,7 @@ export default function Quote({
     //fontStyle: "italic",
     fontWeight: "400",
     margin: "0",
-    padding: "0 2rem 2rem 2rem",
+    padding: "0 0rem 2rem 0rem",
     //maxWidth: "58rem",
   };
 
