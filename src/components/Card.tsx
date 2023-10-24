@@ -1,4 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 import './Card.css';
 
 export default function Card({
@@ -21,6 +22,56 @@ export default function Card({
   //console.log("img: " + image_url);
   //console.log("backgroundColor: " + backgroundColor.value);
   //console.log("textColor: " + textColor.value);
+
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (_node, children) => (
+        <p
+          style={{
+            //color: theme.colors.darkBlue,
+            //fontFamily: theme.fonts.Century_Gothic,
+            //fontSize: '15px',
+            //lineHeight: '30px',
+            //marginBottom: '0.75rem',
+            marginTop: "1.75rem",
+          }}
+        >
+          {children}
+        </p>
+      ),
+      [BLOCKS.UL_LIST]: (_node, children) => {
+        return (
+          <ul
+            style={{
+              listStyle: 'disc',
+              //color: theme.colors.darkBlue,
+              //fontFamily: theme.fonts.Century_Gothic,
+              //fontSize: '15px',
+              //lineHeight: '30px',
+              //marginLeft: '1rem',
+            }}
+          >
+            {children.map((item) => (
+              <li key={item.key}>{item.props.children[0].props.children[0]}</li>
+            ))}
+          </ul>
+        );
+      },
+  
+      [INLINES.HYPERLINK]: (node, children) => {
+        return (
+          <a
+            href={node.data.uri}
+            target="_blank"
+            rel="noopener noreferrer"
+            //style={{ color: theme.colors.darkBlue }}
+          >
+            {children}
+          </a>
+        );
+      },
+    },
+  };
 
   const entryStyle = {
     backgroundColor: backgroundColor.value,
@@ -48,15 +99,15 @@ export default function Card({
     display: "block",
     color: textColor.value,
     padding: "0 2rem 0",
-    fontSize: "1.5rem",
+    fontSize: "1.75rem",
     fontWeight: "400",
     maxWidth: "34ch",
     textWrap: "balance",
   };
   const imgCellStyle = {
     flexGrow: "1",
-    width: "50%",
-    maxWidth: "50%",
+    width: "40%",
+    maxWidth: "40%",
   };
   const imgStyle = {
     width: "100%",
@@ -71,7 +122,7 @@ export default function Card({
           <span style={txtCellStyle}>
             <h1 style={titleStyle}>{title}</h1>
             <div>
-              <span style={abstractStyle}>{documentToReactComponents(text)}</span>
+              <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
             </div>
           </span>
           <span style={imgCellStyle}>
@@ -90,7 +141,7 @@ export default function Card({
           <span style={txtCellStyle}>
             <h1 style={titleStyle}>{title}</h1>
             <div>
-              <span style={abstractStyle}>{documentToReactComponents(text)}</span>
+              <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
             </div>
           </span>
         </div>
