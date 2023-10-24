@@ -18,13 +18,9 @@ export default function Header({
     flexDirection: "column" as "column",
     backgroundColor: headProps.backgroundColor.value,
     backgroundImage: "url(" + headProps.backgroundImage.fields.file.url + ")",
-    //backgroundSize: "contain",
     backgroundSize: "cover",
     backgroundPosition: "center top",
-    //backgroundSize: "100% auto",
-    //backgroundRepeat: "no-repeat",
-    //backgroundPosition: "0 -250px",
-    padding: "0 0 3rem 0",
+    padding: "0 0 0rem 0",
     margin: 0,
     height: "32rem",
     width: "100%",
@@ -36,7 +32,6 @@ export default function Header({
     padding: "2rem 2rem 0 2rem",
   };
   const txtCellStyle = {
-    width: "100%",
     textAlign: "center" as "center",
     alignItems: "center" as "center",
     justifyContent: "center" as "center",
@@ -66,12 +61,12 @@ export default function Header({
 	return (
     <div style={rowStyle}>
       <img style={imgStyle} src="img/mint_logo_v1_light.png" />
-      <span style={txtCellStyle}>
+      <div style={txtCellStyle}>
         <h1 style={titleStyle}>{headProps.headline}</h1>
         <div>
-          <p style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline)}</p>
+          <span style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline)}</span>
         </div>
-      </span>
+      </div>
     </div>
 	);
 }

@@ -26,7 +26,7 @@ export default function Quote({
     backgroundColor: backgroundColor.value,
     alignItems: "center" as "center",
     justifyContent: "center" as "center",
-    padding: 0,
+    padding: "0 0 4rem 0",
     margin: 0,
   };
   const titleStyleCentered = {
@@ -35,8 +35,8 @@ export default function Quote({
     fontSize: "4rem",
     fontStyle: "bold",
     fontWeight: "700",
-    margin: "2rem 0 0",
-    padding: "2rem 4rem 0 4rem",
+    margin: "0",
+    padding: "4rem 0 0 0",
     maxWidth: "22ch",
     minWidth: "16ch",
   };
@@ -46,8 +46,8 @@ export default function Quote({
     fontSize: "1.75rem",
     fontStyle: "italic",
     fontWeight: "400",
-    margin: "0rem 2rem 0 2rem",
-    padding: "0rem",
+    margin: "0",
+    padding: "0",
     maxWidth: "58rem",
   };
   const abstractStyleCentered = {
@@ -56,15 +56,9 @@ export default function Quote({
     fontSize: "2rem",
     fontStyle: "italic",
     fontWeight: "400",
-    margin: "0 2rem 0rem",
+    margin: "0",
     width: "32rem",
     padding: "auto",
-  };
-  const hrStyle = {
-    border: "1px solid " + textColor.value,
-    width: "12rem",
-    margin: "2rem 0 4rem",
-    padding: "0",
   };
 
 	return (
@@ -72,7 +66,6 @@ export default function Quote({
       <h1 style={titleStyleCentered}>{title}</h1>
       { abstract && <span style={abstractStyleCentered}>{abstract}</span>}
       { text && <span style={paragraphStyle}>{documentToReactComponents(text)}</span>}
-      <hr style={hrStyle}></hr>
     </section>
 	);
 }
