@@ -158,7 +158,8 @@ export default function Quote({
   const quoteContainerStyle = {
     //width: "auto",
     //width: "56rem",
-    padding: "0rem 8rem",
+    alignSelf: "center" as "center",
+    padding: "0rem 0rem",
   };
   const textContainerStyle = {
     //width: "auto",
