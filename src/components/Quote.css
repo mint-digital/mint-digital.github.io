@@ -1,8 +1,8 @@
 .Quote {
   padding: 2rem; 
-  text-align: center;
 }
 
 p {
   padding: "1rem 0 0 0";
+  display: "block";
 }

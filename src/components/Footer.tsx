@@ -57,7 +57,7 @@ export default function Footer({
   };
 
 	return (
-    <section style={entryStyle}>
+    <section id="kompis" style={entryStyle}>
       <div style={rowStyle}>
         <img style={profileStyle} src={footProps.image.fields.file.url}></img>
         <span style={txtCellStyle}>

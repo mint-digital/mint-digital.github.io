@@ -9,6 +9,8 @@ export default function Card({
   backgroundColor,
   textColor,
   alignImageRight,
+  ctaText,
+  ctaUrl,
 }: {
   title: string,
   text,
@@ -16,6 +18,8 @@ export default function Card({
   backgroundColor,
   textColor,
   alignImageRight,
+  ctaText,
+  ctaUrl,
 }) {
   //console.log("title; " + title);
   //console.log("abstract: " + abstract);
@@ -82,18 +86,21 @@ export default function Card({
     display: "flex",
   };
   const txtCellStyle = {
+    display: "inline-block",
+    position: "relative" as "relative",
     padding: "5rem 7rem 5rem 7rem",
     flexGrow: "1",
   };
   const titleStyle = {
     color: textColor.value,
     padding: "0 0rem 0",
-    margin: "2rem 0",
+    margin: "0rem 0",
     fontSize: "4rem",
     lineHeight: "4rem",
     fontWeight: "700",
     fontStyle: "bold",
-    maxWidth: "10ch",
+    textAlign: "left" as "left",
+    //maxWidth: "20ch",
   };
   const abstractStyle = {
     display: "block",
@@ -110,10 +117,44 @@ export default function Card({
     maxWidth: "40%",
   };
   const imgStyle = {
+    display: "block",
     width: "100%",
     height: "100%",
     objectFit: "cover" as "cover",
     transformOrigin: "top center",
+  };
+  const ctaStyle = {
+    display: "block",
+    color: "#efe9e0",
+    backgroundColor: "#ab6c5b",
+    borderRadius: "16px",
+    fontSize: "1.5rem",
+    fontWeight: "400",
+    textDecoration: "none",
+    textAlign: "center" as "center",
+    textTransform: "uppercase" as "uppercase",
+    letterSpacing: "0.2rem",
+    margin: "0rem 0 0 0",
+    padding: "2rem 2rem 2rem 2rem",
+  };
+  const ctaBallStyle = {
+    position: "absolute" as "absolute",
+    right: "2rem",
+    width: "10ch",
+    //height: "12ch",
+    padding: "2.5rem 1.25rem",
+//    padding: "4rem",
+    bottom: "-6rem",
+    rotate: "15deg",
+    color: "#efe9e0",
+    backgroundColor: "#ab6c5b",
+    borderRadius: "50%",
+    fontSize: "1.5rem",
+    fontWeight: "400",
+    textDecoration: "none",
+    textAlign: "center" as "center",
+    textTransform: "uppercase" as "uppercase",
+    letterSpacing: "0.2rem",
   };
 
   if(alignImageRight) {
@@ -125,6 +166,7 @@ export default function Card({
             <div>
               <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
             </div>
+            {ctaText && <a style={ctaStyle} href={ctaUrl}>{ctaText}</a>}
           </span>
           <span style={imgCellStyle}>
             <img style={imgStyle} src={image_url}></img>
@@ -140,10 +182,12 @@ export default function Card({
             <img style={imgStyle} src={image_url}></img>
           </span>
           <span style={txtCellStyle}>
+            <a style={ctaBallStyle} href={ctaUrl}>{ctaText}</a>
             <h1 style={titleStyle}>{title}</h1>
             <div>
               <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
             </div>
+            {/* {ctaText && <a style={ctaStyle} href={ctaUrl}>{ctaText}</a>} */}
           </span>
         </div>
       </section>
