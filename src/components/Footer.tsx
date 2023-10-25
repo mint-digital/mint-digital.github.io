@@ -7,8 +7,9 @@ export default function Footer({
   //console.log("bgColor; " + JSON.stringify(footProps.image));
 
   const entryStyle = {
+//    background: "linear-gradient(to bottom, " + footProps.backgroundColor.value + " 0%, rgba(0,0,0,0)) 100%",
     backgroundColor: footProps.backgroundColor.value,
-    padding: 0,
+    padding: "0 0 30rem 0",
     margin: 0,
     width: "100%",
     maxWidth: "1400px",
