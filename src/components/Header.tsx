@@ -31,14 +31,18 @@ export default function Header({
   const videoStyle = {
     //position: "fixed",
     //zIndex: "-1",
-    width: "100%",
+    //width: "100%",
     filter: "brightness(50%)",
-    
+    objectFit: "cover",
+
+    height: "100%",
+    width: "177.77777778vh", /* 100 * 16 / 9 */
+    minWidth: "100%",
+    minHeight: "56.25vw", /* 100 * 9 / 16 */
     //height: "32rem",
 //    height: "100%",
 //    width: "100%",
 //    float: "left",
-//    top: 0,
 //    padding: "none",
 //    position: "relative",
   };
