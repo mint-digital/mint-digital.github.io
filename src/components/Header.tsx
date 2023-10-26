@@ -25,6 +25,7 @@ export default function Header({
     height: "32rem",
     width: "100%",
     maxWidth: "1400px",
+  //  minWidth: "496px",
   };
   const imgStyle = {
     width: "6rem",

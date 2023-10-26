@@ -13,6 +13,7 @@ export default function Footer({
     margin: 0,
     width: "100%",
     maxWidth: "1400px",
+    //minWidth: "496px",
   };
   const rowStyle = {
     display: "flex",

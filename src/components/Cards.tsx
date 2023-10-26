@@ -20,15 +20,23 @@ export default function Cards({
       elem = <Quote {...cardProps} />
     }
     return (
-      <li key={idx}> 
+      //<li key={idx}> 
+      //  {elem}
+      //</li>
+      <div key={idx}> 
         {elem}
-      </li>
+      </div>
     );
   });
   //console.log("cs: " + cs);
 
   const ulStyle = {
+    listStyleType: "none",
+    padding: "0",
+    margin: "0",
     maxWidth: "1400px",
+//    minWidth: "496px",
   }
-  return (<ul style={ulStyle}>{cs}</ul>);
+//  return (<ul style={ulStyle}>{cs}</ul>);
+  return (<div style={ulStyle}>{cs}</div>);
 }

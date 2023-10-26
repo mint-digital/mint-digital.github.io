@@ -84,12 +84,13 @@ export default function Card({
   };
   const rowStyle = {
     display: "flex",
+    justifyContent: "space-between",
   };
   const txtCellStyle = {
     display: "inline-block",
     position: "relative" as "relative",
     padding: "5rem 7rem 5rem 7rem",
-    flexGrow: "1",
+    //flexGrow: "1",
   };
   const titleStyle = {
     color: textColor.value,
@@ -112,12 +113,13 @@ export default function Card({
     textWrap: "balance",
   };
   const imgCellStyle = {
-    flexGrow: "1",
+    //flexGrow: "1",
+    display: "inline",
     width: "40%",
     maxWidth: "40%",
   };
   const imgStyle = {
-    display: "block",
+    display: "inline",
     width: "100%",
     height: "100%",
     objectFit: "cover" as "cover",
