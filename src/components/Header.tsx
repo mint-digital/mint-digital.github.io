@@ -35,6 +35,7 @@ export default function Header({
     filter: "brightness(50%)",
     
     //height: "32rem",
+//    height: "100%",
 //    width: "100%",
 //    float: "left",
 //    top: 0,
