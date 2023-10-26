@@ -85,9 +85,9 @@ export default function Header({
 
 	return (
     <div style={rowStyle}>
-      <video id="background-video" style={videoStyle} autoPlay loop muted poster="img/mint_logo_v1_light.png">
+      <video id="background-video" style={videoStyle} autoPlay loop muted>
         {/* <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4" /> */}
-        <source src="img/pexels-matthias-groeneveld-5365208 (1080p).mp4" type="video/mp4" />
+        <source src="img/forest.mp4" type="video/mp4" />
       </video>
       <img style={imgStyle} src="img/mint_logo_v1_light.png" />
       <div style={txtCellStyle}>
