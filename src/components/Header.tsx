@@ -25,18 +25,42 @@ export default function Header({
     height: "32rem",
     width: "100%",
     maxWidth: "1400px",
+    overflow: "hidden",
   //  minWidth: "496px",
   };
+  const videoStyle = {
+    //position: "fixed",
+    //zIndex: "-1",
+    width: "100%",
+    filter: "brightness(50%)",
+    
+    //height: "32rem",
+//    width: "100%",
+//    float: "left",
+//    top: 0,
+//    padding: "none",
+//    position: "relative",
+  };
   const imgStyle = {
+    position: "absolute" as "absolute",
+    top: "0rem",
+
     width: "6rem",
     alignSelf: "start",
     padding: "2rem 2rem 0 2rem",
   };
   const txtCellStyle = {
+    position: "absolute" as "absolute",
+    top: "8rem",
+    left: "50%",
+    transform: "translate(-50%, 0%)",
+//    left: "25%",
+
     textAlign: "center" as "center",
     alignItems: "center" as "center",
     justifyContent: "center" as "center",
     padding: "0",
+    zIndex: "100",
   };
   const titleStyle = {
     color: headProps.textColor.value,
@@ -61,6 +85,10 @@ export default function Header({
 
 	return (
     <div style={rowStyle}>
+      <video id="background-video" style={videoStyle} autoPlay loop muted poster="img/mint_logo_v1_light.png">
+        {/* <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4" /> */}
+        <source src="img/pexels-matthias-groeneveld-5365208 (1080p).mp4" type="video/mp4" />
+      </video>
       <img style={imgStyle} src="img/mint_logo_v1_light.png" />
       <div style={txtCellStyle}>
         <h1 style={titleStyle}>{headProps.headline}</h1>

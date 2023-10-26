@@ -54,7 +54,7 @@ export default function Quote({
             //fontSize: '15px',
             //lineHeight: '30px',
             //marginBottom: '0.75rem',
-            fontSize: "2rem",
+            fontSize: "1.75rem",
             display: "block",
             marginTop: "0rem",
           }}
@@ -153,7 +153,7 @@ export default function Quote({
     backgroundColor: backgroundColor.value,
     //justifyContent: "center" as "center",
     //minWidth: "50rem",
-    padding: "3rem 6rem",
+    padding: "3rem auto",
     margin: 0,
   };
   const quoteContainerStyle = {
@@ -164,7 +164,7 @@ export default function Quote({
   const textContainerStyle = {
     //width: "auto",
     //width: "56rem",
-    padding: "2rem 1rem",
+    padding: "4rem 5rem",
   };
   const quoteTitleStyleCentered = {
     display: "block",
