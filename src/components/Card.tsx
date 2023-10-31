@@ -82,14 +82,14 @@ export default function Card({
     padding: 0,
     margin: 0,
   };
-  const rowStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-  };
+  // const rowStyle = {
+  //   display: "flex",
+  //   justifyContent: "space-between",
+  // };
   const txtCellStyle = {
     display: "inline-block",
     position: "relative" as "relative",
-    padding: "5rem 7rem 5rem 7rem",
+    //padding: "5rem 7rem 5rem 7rem",
     //flexGrow: "1",
   };
   const titleStyle = {
@@ -109,19 +109,19 @@ export default function Card({
     padding: "0 0rem 2rem 0",
     fontSize: "1.75rem",
     fontWeight: "400",
-    maxWidth: "34ch",
+    //maxWidth: "34ch",
     textWrap: "balance",
   };
-  const imgCellStyle = {
-    //flexGrow: "1",
-    display: "inline",
-    width: "40%",
-    maxWidth: "40%",
-  };
+  // const imgCellStyle = {
+  //   //flexGrow: "1",
+  //   display: "inline",
+  //   width: "40%",
+  //   maxWidth: "40%",
+  // };
   const imgStyle = {
     display: "inline",
     width: "100%",
-    height: "100%",
+    // height: "100%",
     objectFit: "cover" as "cover",
     transformOrigin: "top center",
   };
@@ -162,15 +162,16 @@ export default function Card({
   if(alignImageRight) {
     return (
       <section style={entryStyle}>
-        <div style={rowStyle}>
-          <span style={txtCellStyle}>
+        <div className="rowStyle">
+          <span className='cardTextCell' style={txtCellStyle}>
             <h1 style={titleStyle}>{title}</h1>
             <div>
               <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
             </div>
             {ctaText && <a style={ctaStyle} href={ctaUrl}>{ctaText}</a>}
           </span>
-          <span style={imgCellStyle}>
+          {/* <span style={imgCellStyle}> */}
+          <span className='imgCellStyle'>
             <img style={imgStyle} src={image_url}></img>
           </span>
         </div>
@@ -179,11 +180,12 @@ export default function Card({
   } else {
     return (
       <section style={entryStyle}>
-        <div style={rowStyle}>
-          <span style={imgCellStyle}>
+        <div className="rowStyle">
+          {/* <span style={imgCellStyle}> */}
+          <span className="imgCellStyle">
             <img style={imgStyle} src={image_url}></img>
           </span>
-          <span style={txtCellStyle}>
+          <span className='cardTextCell' style={txtCellStyle}>
             <a style={ctaBallStyle} href={ctaUrl}>{ctaText}</a>
             <h1 style={titleStyle}>{title}</h1>
             <div>

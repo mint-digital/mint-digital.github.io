@@ -1,3 +1,56 @@
 section {
   padding: 2rem; 
 }
+
+.cardTextCell {
+  padding: 5rem 7rem 5rem 7rem;
+}
+
+/* .imgCellStyle { */
+  /* display: inline;  */
+  /* width: 100%; */
+  /* max-height: 30rem; */
+/* } */
+
+.rowStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+};
+
+.imgCellStyle {
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+  /* max-height: 40rem; */
+  object-position: 50% 50%;
+
+  /* width: 100%; */
+  /* min-width: 100%; */
+}
+
+@media screen and (max-width: 700px) {				
+  .cardTextCell {
+    padding: 4rem;
+  }
+
+  .rowStyle {
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .imgCellStyle {
+    position: relative;
+    height: 30rem;
+    /* max-height: 20rem; */
+    object-fit: cover;
+    overflow: hidden;
+    transform-origin: center center;
+    object-position: 50% 50%;
+
+    /* width: 100%; */
+    /* min-width: 100%; */
+  }
+}
+
