@@ -130,10 +130,10 @@ export default function Header({
       videoFile = "img/700_F_638263369_S6IB0OWycFo8cxSvq22CpEVY4hzDSOmg_ST.mp4";   
     break;
     case 2:       
-      videoFile = "img/pexels-stefanie-jockschat-14163968 (Original).mp4";   
+      videoFile = "img/test_redux.mp4";   
     break;
     case 3:       
-      videoFile = "img/pexels_videos_2711147 (2160p).mp4";   
+      videoFile = "img/test_redux2.mp4";   
     break;
     case 4:       
       videoFile = "img/pexels-carsten-link-14057038 (1080p).mp4";   
