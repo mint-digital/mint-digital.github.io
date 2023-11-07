@@ -1,8 +1,8 @@
 ---
-import Cards from "../components/Cards";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import { fetchCards, fetchHeader, fetchFooter } from "../utils/contentful";
+import Cards from "../../components/Cards";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import { fetchCards, fetchHeader, fetchFooter } from "../../utils/contentful";
 //import { useMediaQuery } from 'react-responsive'
 //const isBigScreen = useMediaQuery({ query: '(min-width: 900px)' })
 //const isMediumScreen = useMediaQuery({ query: '(max-width: 700px)' })
@@ -25,14 +25,33 @@ import { fetchCards, fetchHeader, fetchFooter } from "../utils/contentful";
 //const bright = Astro.url.searchParams.get('bright')! || '60';
 
 const cards = { cards: await fetchCards() };
+const { video, bright } = Astro.params;
+export function getStaticPaths() {
+	return [
+		{ params: { video: '1', bright: 60 } },
+		{ params: { video: '1', bright: 80 } },
+		{ params: { video: '1', bright: 100 } },
+		{ params: { video: '2', bright: 60 } },
+		{ params: { video: '2', bright: 80 } },
+		{ params: { video: '2', bright: 100 } },
+		{ params: { video: '3', bright: 60 } },
+		{ params: { video: '3', bright: 80 } },
+		{ params: { video: '3', bright: 100 } },
+		{ params: { video: '4', bright: 60 } },
+		{ params: { video: '4', bright: 80 } },
+		{ params: { video: '4', bright: 100 } },
+		{ params: { video: '5', bright: 60 } },
+		{ params: { video: '5', bright: 80 } },
+		{ params: { video: '5', bright: 100 } },
+	];
+}
 const headProps = {
-	videoNumber: 0,
-	bright: 60,
+	videoNumber: video,
+	bright: bright,
 	headProps: await fetchHeader(),
 };
 const footProps = { footProps: await fetchFooter() };
-
-const searchParams = new URLSearchParams(Astro.request.url);
+console.log('video page')
 ---
 
 <html lang="en">
@@ -89,8 +108,7 @@ const searchParams = new URLSearchParams(Astro.request.url);
 			}
 		</style>
 	</head>
-	<script>
-	</script>
+	<script></script>
 	<body>
 		<main
 			style="display: flex; flex-direction: column; align-items: center; min-width: 40rem"

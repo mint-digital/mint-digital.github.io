@@ -6,7 +6,7 @@ export default function Header({
   bright,
   headProps,
 }: {
-  videoNumber: Number,
+  videoNumber: string,
   bright: Number,
   headProps,
 }) {
@@ -127,25 +127,28 @@ export default function Header({
   var videoFile = null;
   switch(videoNumber) {
 //  switch(headProps.videoNumber) {
-    case 1:       
+    case '1':       
       videoFile = "../img/700_ST.mp4";   
     break;
-    case 2:       
+    case '2':       
       videoFile = "../img/test_redux.mp4";   
     break;
-    case 3:       
+    case '3':       
+      console.log('case3: ' + videoNumber);
       videoFile = "../img/test_redux2.mp4";   
     break;
-    case 4:       
+    case '4':       
       videoFile = "../img/pexels-carsten-link-14057038 (1080p).mp4";   
     break;
-    case 5:       
+    case '5':       
       videoFile = "../img/forest_redux.mp4";   
     break;
     default:
-      videoFile = "../img/forest.mp4";
+      console.log('default case: ' + videoNumber);
+      videoFile = "../img/forest_redux.mp4";
   };
 
+  console.log('videoFile: ' + videoFile);
 	return (
     <div style={rowStyle}>
       <video id="background-video" style={videoStyle} autoPlay loop muted>
