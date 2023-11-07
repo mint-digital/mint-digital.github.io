@@ -1,0 +1,106 @@
+---
+import Cards from "../components/Cards";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { fetchCards, fetchHeader, fetchFooter } from "../utils/contentful";
+//import { useMediaQuery } from 'react-responsive'
+//const isBigScreen = useMediaQuery({ query: '(min-width: 900px)' })
+//const isMediumScreen = useMediaQuery({ query: '(max-width: 700px)' })
+//const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+//const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+
+//interface Big {
+//	size: "big"
+//}
+//interface Mid {
+//	size: "mid"
+//}
+//interface Small {
+//	size: "small"
+//}
+//
+//type ScreenSize = Big | Mid | Small;
+
+//const video = Astro.url.searchParams.get('video')! || '0';
+//const bright = Astro.url.searchParams.get('bright')! || '60';
+
+const cards = { cards: await fetchCards() };
+const headProps = {
+	videoNumber: 4,
+	bright: 100,
+	headProps: await fetchHeader(),
+};
+const footProps = { footProps: await fetchFooter() };
+
+const searchParams = new URLSearchParams(Astro.request.url);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<base href="." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/Common.css" />
+		<style>
+			html,
+			body {
+				font-family: "Lato";
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				font-size: 16px;
+				background-attachment: fixed;
+				background-color: white;
+				scroll-behavior: smooth;
+			}
+			@media (prefers-color-scheme: dark) {
+				html,
+				body {
+					font-family: "Lato";
+					margin: 0;
+					padding: 0;
+					height: 100%;
+					font-size: 16px;
+					background-attachment: fixed;
+					background-color: black;
+					scroll-behavior: smooth;
+				}
+			}
+
+			@media screen and (max-width: 900px) {
+				html,
+				body {
+					font-size: 12px;
+				}
+			}
+
+			@media screen and (max-width: 700px) {
+				html,
+				body {
+					font-size: 8px;
+				}
+			}
+		</style>
+	</head>
+	<script>
+		const urlsearchparams = new URLSearchParams(window.location.search);
+//		const params = Object.fromentries(urlsearchparams.entries());
+		console.log('params', urlsearchparams);
+	</script>
+	<body>
+		<main
+			style="display: flex; flex-direction: column; align-items: center; min-width: 40rem"
+		>
+			<Header {...headProps} client:visible />
+			<Cards {...cards} client:visible />
+			<Footer {...footProps} client:visible />
+		</main>
+	</body>
+</html>

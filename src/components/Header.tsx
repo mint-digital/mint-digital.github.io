@@ -2,16 +2,47 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import styles from './Header.module.css'; 
 
 export default function Header({
+  videoNumber,
+  bright,
   headProps,
 }: {
+  videoNumber: Number,
+  bright: Number,
   headProps,
 }) {
-  //console.log("asdf " + JSON.stringify(headProps));
-  //console.log("header; " + headProps.headline);
-  //console.log("subheader: " + headProps.subHeader);
-  //console.log("bgColor: " + headProps.backgroundColor.value);
-  //console.log("txtColor: " + headProps.textColor.value);
-  //console.log("bgImg: " + headProps.backgroundImage.fields.file.url);
+  
+//  const videoNumber: Number = Number.parseInt(searchParams.get('video'));
+//  const brightness = searchParams.get('bright');
+  console.log(videoNumber);
+  console.log(bright);
+//  console.log(videoNumber);
+//  console.log(brightness);
+
+//  const urlSearchParams = new URLSearchParams(Astro.request.url);
+//  const params = Object.fromEntries(urlSearchParams.entries());
+//  
+////  const headProps = {
+//  const props = {
+////    headProps: {
+//      videoNumber: params.video ? params.video : 0,
+//      brightness: params.bright ? params.bright : 60,
+////      props: header,
+////    }
+//  } ;
+//  console.log(headProps);
+//  console.log(props);
+  //const [searchParams, _] = useSearchParams();
+  //console.log(searchParams);
+  //const videoNumber = searchParams.get("video");
+  //const brightness = searchParams.get("bright");
+
+
+  //console.log("asdf " + JSON.stringify(props));
+  //console.log("header; " + props.headline);
+  //console.log("subheader: " + props.subHeader);
+  //console.log("bgColor: " + props.backgroundColor.value);
+  //console.log("txtColor: " + props.textColor.value);
+  //console.log("bgImg: " + props.backgroundImage.fields.file.url);
 
   const rowStyle = {
     display: "flex",
@@ -19,7 +50,7 @@ export default function Header({
     backgroundColor: headProps.backgroundColor.value,
     backgroundImage: "url(" + headProps.backgroundImage.fields.file.url + ")",
     backgroundSize: "cover",
-    backgroundPosition: "center top",
+    backgroundPosition: "center bottom",
     padding: "0 0 0rem 0",
     margin: 0,
     height: "32rem",
@@ -28,17 +59,21 @@ export default function Header({
     overflow: "hidden",
   //  minWidth: "496px",
   };
+
+//  const bright = brightness ? brightness : 60;
+//  const bright = headProps.brightness ? headProps.brightness : 60;
+
   const videoStyle = {
     //position: "fixed",
     //zIndex: "-1",
     //width: "100%",
-    filter: "brightness(50%)",
-    objectFit: "cover",
+    filter: "brightness(" + bright + "%)",
+    objectFit: "cover" as "cover",
 
     height: "100%",
     width: "177.77777778vh", /* 100 * 16 / 9 */
     minWidth: "100%",
-    minHeight: "56.25vw", /* 100 * 9 / 16 */
+//    minHeight: "56.25vw", /* 100 * 9 / 16 */
     //height: "32rem",
 //    height: "100%",
 //    width: "100%",
@@ -88,11 +123,33 @@ export default function Header({
     letterSpacing: "0.2rem",
   };
 
+  var videoFile = null;
+  switch(videoNumber) {
+//  switch(headProps.videoNumber) {
+    case 1:       
+      videoFile = "img/700_F_638263369_S6IB0OWycFo8cxSvq22CpEVY4hzDSOmg_ST.mp4";   
+    break;
+    case 2:       
+      videoFile = "img/pexels-stefanie-jockschat-14163968 (Original).mp4";   
+    break;
+    case 3:       
+      videoFile = "img/pexels_videos_2711147 (2160p).mp4";   
+    break;
+    case 4:       
+      videoFile = "img/pexels-carsten-link-14057038 (1080p).mp4";   
+    break;
+    case 5:       
+      videoFile = "img/forest.mp4";   
+    break;
+    default:
+      videoFile = "img/forest.mp4";
+  };
+
 	return (
     <div style={rowStyle}>
       <video id="background-video" style={videoStyle} autoPlay loop muted>
         {/* <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4" /> */}
-        <source src="img/forest.mp4" type="video/mp4" />
+        <source src={videoFile} type="video/mp4" />
       </video>
       <img style={imgStyle} src="img/mint_logo_v1_light.png" />
       <div style={txtCellStyle}>
