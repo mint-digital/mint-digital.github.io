@@ -127,7 +127,7 @@ export default function Header({
   switch(videoNumber) {
 //  switch(headProps.videoNumber) {
     case 1:       
-      videoFile = "../img/700_F_638263369_S6IB0OWycFo8cxSvq22CpEVY4hzDSOmg_ST.mp4";   
+      videoFile = "../img/700_ST.mp4";   
     break;
     case 2:       
       videoFile = "../img/test_redux.mp4";   
@@ -151,7 +151,7 @@ export default function Header({
         {/* <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4" /> */}
         <source src={videoFile} type="video/mp4" />
       </video>
-      <img style={imgStyle} src="img/mint_logo_v1_light.png" />
+      <img style={imgStyle} src="../img/mint_logo_v1_light.png" />
       <div style={txtCellStyle}>
         <h1 style={titleStyle}>{headProps.headline}</h1>
         <div>
