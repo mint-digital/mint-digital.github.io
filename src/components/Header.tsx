@@ -69,9 +69,10 @@ export default function Header({
     //width: "100%",
     filter: "brightness(" + bright + "%)",
     objectFit: "cover" as "cover",
+    objectPosition: "center center",
 
-    height: "100%",
-    width: "177.77777778vh", /* 100 * 16 / 9 */
+    height: "32rem",
+//    width: "177.77777778vh", /* 100 * 16 / 9 */
     minWidth: "100%",
 //    minHeight: "56.25vw", /* 100 * 9 / 16 */
     //height: "32rem",
