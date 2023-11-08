@@ -143,6 +143,12 @@ export default function Header({
     case '5':       
       videoFile = "../img/forest_redux.mp4";   
     break;
+    case '6':       
+      videoFile = "../img/vid_1.mp4";   
+    break;
+    case '7':       
+      videoFile = "../img/vid_2.mp4";   
+    break;
     default:
       console.log('default case: ' + videoNumber);
       videoFile = "../img/forest_redux.mp4";
