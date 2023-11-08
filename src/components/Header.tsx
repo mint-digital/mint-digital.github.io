@@ -68,7 +68,7 @@ export default function Header({
     position: "absolute" as "absolute",
     top: "0",
     zIndex: "1",
-    //width: "100%",
+    width: "100%",
     filter: "brightness(" + bright + "%)",
     objectFit: "cover" as "cover",
     objectPosition: "center center",
@@ -76,7 +76,8 @@ export default function Header({
 //    height: "32rem",
     height: "100svh",
 //    width: "177.77777778vh", /* 100 * 16 / 9 */
-    minWidth: "100%",
+//    minWidth: "100%",
+    overflow: "hidden",
 //    minHeight: "56.25vw", /* 100 * 9 / 16 */
     //height: "32rem",
 //    height: "100%",
@@ -89,7 +90,7 @@ export default function Header({
     position: "absolute" as "absolute",
     top: "0rem",
 
-    width: "6rem",
+    width: "8rem",
     alignSelf: "start",
     padding: "2rem 2rem 0 2rem",
     zIndex: "100",
@@ -127,12 +128,12 @@ export default function Header({
     zIndex: "100",
   };
   const titleStyle = {
-//    alignSelf: "bottom",
+    alignSelf: "center" as "center",
 //    position: "absolute" as "absolute",
 //    bottom: "0",
     color: headProps.textColor.value,
-    padding: "0 auto 3rem 0",
-    margin: "0 auto 3rem",
+//    padding: "0 auto 3rem 0",
+//    margin: "0 auto 3rem",
 //    fontSize: "5rem",
     fontSize: "6rem",
 //    lineHeight: "8rem",
