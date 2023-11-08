@@ -6,8 +6,8 @@ export default function Header({
   bright,
   headProps,
 }: {
-  videoNumber: string,
-  bright: Number,
+  videoNumber,
+  bright,
   headProps,
 }) {
   
@@ -45,17 +45,18 @@ export default function Header({
   //console.log("bgImg: " + props.backgroundImage.fields.file.url);
 
   const rowStyle = {
-    display: "flex",
-    flexDirection: "column" as "column",
+//    display: "flex",
+//    flexDirection: "column" as "column",
     backgroundColor: headProps.backgroundColor.value,
     backgroundImage: "url(" + headProps.backgroundImage.fields.file.url + ")",
     backgroundSize: "cover",
     backgroundPosition: "center bottom",
     padding: "0 0 0rem 0",
     margin: 0,
-    height: "32rem",
+    //height: "32rem",
     width: "100%",
-    maxWidth: "1400px",
+    height: "100svh",
+    //maxWidth: "1400px",
     overflow: "hidden",
   //  minWidth: "496px",
   };
@@ -64,14 +65,16 @@ export default function Header({
 //  const bright = headProps.brightness ? headProps.brightness : 60;
 
   const videoStyle = {
-    //position: "fixed",
-    //zIndex: "-1",
+    position: "absolute" as "absolute",
+    top: "0",
+    zIndex: "1",
     //width: "100%",
     filter: "brightness(" + bright + "%)",
     objectFit: "cover" as "cover",
     objectPosition: "center center",
 
-    height: "32rem",
+//    height: "32rem",
+    height: "100svh",
 //    width: "177.77777778vh", /* 100 * 16 / 9 */
     minWidth: "100%",
 //    minHeight: "56.25vw", /* 100 * 9 / 16 */
@@ -89,37 +92,69 @@ export default function Header({
     width: "6rem",
     alignSelf: "start",
     padding: "2rem 2rem 0 2rem",
+    zIndex: "100",
   };
+//  const txtCellStyle = {
+//    position: "absolute" as "absolute",
+//    top: "8rem",
+//    left: "50%",
+//    transform: "translate(-50%, 0%)",
+////    left: "25%",
+//
+//    textAlign: "center" as "center",
+//    alignItems: "center" as "center",
+//    justifyContent: "center" as "center",
+//    padding: "0",
+//    zIndex: "100",
+//  };
   const txtCellStyle = {
+    display: "flex",
+    flexDirection: "column" as "column",
     position: "absolute" as "absolute",
-    top: "8rem",
-    left: "50%",
-    transform: "translate(-50%, 0%)",
-//    left: "25%",
+    width: "100%",
+    height: "100svh",
+    bottom: "0",
+//    alignItems: "bottom",
+    alignItems: "bottom",
+//    left: "50%",
+//    transform: "translate(-50%, 0%)",
 
     textAlign: "center" as "center",
-    alignItems: "center" as "center",
+//    alignItems: "center" as "center",
+//    justifyContent: "flex-end" as "flex-end",
     justifyContent: "center" as "center",
     padding: "0",
     zIndex: "100",
   };
   const titleStyle = {
+//    alignSelf: "bottom",
+//    position: "absolute" as "absolute",
+//    bottom: "0",
     color: headProps.textColor.value,
     padding: "0 auto 3rem 0",
     margin: "0 auto 3rem",
-    fontSize: "5rem",
-    lineHeight: "5rem",
+//    fontSize: "5rem",
+    fontSize: "6rem",
+//    lineHeight: "8rem",
+    lineHeight: "6rem",
+//    lineHeight: "5rem",
     fontWeight: "700",
     fontStyle: "bold",
     maxWidth: "10ch",
   };
   const subHeadlineStyle = {
+  //  alignSelf: "bottom",
+//    position: "absolute" as "absolute",
+//    bottom: "0",
     color: headProps.textColor.value,
     padding: "0",
-    margin: "0rem auto 0",
-    fontSize: "1.25rem",
+//    margin: "0rem auto 0",
+    margin: "0rem auto",
+//    fontSize: "1.25rem",
+//    fontSize: "2rem",
+    fontSize: "1.5rem",
     fontWeight: "400",
-    width: "ch",
+//    width: "ch",
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
   };

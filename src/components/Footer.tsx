@@ -12,7 +12,7 @@ export default function Footer({
     padding: "0 0 30rem 0",
     margin: 0,
     width: "100%",
-    maxWidth: "1400px",
+//    maxWidth: "1400px",
     //minWidth: "496px",
   };
   const rowStyle = {
