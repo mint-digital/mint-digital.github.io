@@ -14,18 +14,18 @@ section {
 
 .rowStyle {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
 };
 
 .imgCellStyle {
-  position: relative;
+  /* position: relative; */
   object-fit: cover;
   overflow: hidden;
   /* max-height: 40rem; */
   object-position: 50% 50%;
 
-  /* width: 100%; */
+  width: 40%;
   /* min-width: 100%; */
 }
 
@@ -36,21 +36,16 @@ section {
 
   .rowStyle {
     /* display: flex; */
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: flex-start;
   }
 
-  .imgCellStyle {
+  /* .imgCellStyle {
     position: relative;
-    height: 30rem;
-    /* max-height: 20rem; */
     object-fit: cover;
     overflow: hidden;
     transform-origin: center center;
     object-position: 50% 50%;
-
-    /* width: 100%; */
-    /* min-width: 100%; */
-  }
+  } */
 }
 

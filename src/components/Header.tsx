@@ -61,7 +61,7 @@ export default function Header({
   //  minWidth: "496px",
   };
 
-//  const bright = brightness ? brightness : 60;
+  const brightness = bright ? bright : 80;
 //  const bright = headProps.brightness ? headProps.brightness : 60;
 
   const videoStyle = {
@@ -72,6 +72,8 @@ export default function Header({
     filter: "brightness(" + bright + "%)",
     objectFit: "cover" as "cover",
     objectPosition: "center center",
+
+    transform: "rotateY(180deg)",
 
 //    height: "32rem",
     height: "100svh",
@@ -94,6 +96,7 @@ export default function Header({
     alignSelf: "start",
     padding: "2rem 2rem 0 2rem",
     zIndex: "100",
+    filter: "drop-shadow(0 0 .15rem lightslategray)",
   };
 //  const txtCellStyle = {
 //    position: "absolute" as "absolute",
@@ -134,30 +137,41 @@ export default function Header({
     color: headProps.textColor.value,
 //    padding: "0 auto 3rem 0",
 //    margin: "0 auto 3rem",
+    margin: "0",
 //    fontSize: "5rem",
-    fontSize: "6rem",
+    fontSize: "8rem",
 //    lineHeight: "8rem",
-    lineHeight: "6rem",
+    lineHeight: "8rem",
 //    lineHeight: "5rem",
     fontWeight: "700",
     fontStyle: "bold",
     maxWidth: "10ch",
+    filter: "drop-shadow(0 0 .15rem lightslategray)",
   };
   const subHeadlineStyle = {
   //  alignSelf: "bottom",
 //    position: "absolute" as "absolute",
 //    bottom: "0",
     color: headProps.textColor.value,
-    padding: "0",
 //    margin: "0rem auto 0",
-    margin: "0rem auto",
+//    margin: "2rem 0 2rem 0",
+    padding: "2rem 0 2rem 0",
 //    fontSize: "1.25rem",
 //    fontSize: "2rem",
-    fontSize: "1.5rem",
+    fontSize: "1.75rem",
     fontWeight: "400",
 //    width: "ch",
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
+    filter: "drop-shadow(0 0 .15rem lightslategray)",
+  };
+
+  const arrowStyle = {
+    alignSelf: "center",
+    position: "absolute" as "absolute",
+    bottom: "1rem",
+    width: "2rem",
+    fill: "white",
   };
 
   var videoFile = null;
@@ -170,7 +184,6 @@ export default function Header({
       videoFile = "../img/test_redux.mp4";   
     break;
     case '3':       
-      console.log('case3: ' + videoNumber);
       videoFile = "../img/test_redux2.mp4";   
     break;
     case '4':       
@@ -187,7 +200,7 @@ export default function Header({
     break;
     default:
       console.log('default case: ' + videoNumber);
-      videoFile = "../img/forest_redux.mp4";
+      videoFile = "../img/vid_2.mp4";
   };
 
   console.log('videoFile: ' + videoFile);
@@ -199,10 +212,9 @@ export default function Header({
       </video>
       <img style={imgStyle} src="../img/mint_logo_v1_light.png" />
       <div style={txtCellStyle}>
-        <h1 style={titleStyle}>{headProps.headline}</h1>
-        <div>
-          <span style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline)}</span>
-        </div>
+        <h1 className='header-title' style={titleStyle}>{headProps.headline}</h1>
+        <div style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline)}</div>
+        <img src='../img/down-arrow-svgrepo-com_white.svg' style={arrowStyle}></img>
       </div>
     </div>
 	);

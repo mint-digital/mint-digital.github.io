@@ -27,7 +27,7 @@ import { fetchCards, fetchHeader, fetchFooter } from "../utils/contentful";
 const cards = { cards: await fetchCards() };
 const headProps = {
 	videoNumber: 0,
-	bright: 60,
+	bright: 90,
 	headProps: await fetchHeader(),
 };
 const footProps = { footProps: await fetchFooter() };
@@ -44,7 +44,7 @@ const searchParams = new URLSearchParams(Astro.request.url);
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="../css/Common.css" />
@@ -74,27 +74,26 @@ const searchParams = new URLSearchParams(Astro.request.url);
 				}
 			}
 
-			@media screen and (max-width: 900px) {
-				html,
-				body {
-					font-size: 12px;
-				}
-			}
-
-			@media screen and (max-width: 700px) {
+			@media screen and (max-width: 900px),
+			screen and (max-height: 550px) {
 				html,
 				body {
 					font-size: 8px;
 				}
 			}
+
+			@media screen and (max-width: 450px),
+			screen and (max-height: 400px) {
+				html,
+				body {
+					font-size: 5px;
+				}
+			}
 		</style>
 	</head>
-	<script>
-	</script>
+	<script></script>
 	<body>
-		<main
-			style="display: flex; flex-direction: column; align-items: center"
-		>
+		<main style="display: flex; flex-direction: column; align-items: center">
 			<Header {...headProps} client:visible />
 			<Cards {...cards} client:visible />
 			<Footer {...footProps} client:visible />

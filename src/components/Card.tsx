@@ -89,6 +89,7 @@ export default function Card({
   const txtCellStyle = {
     display: "inline-block",
     position: "relative" as "relative",
+    padding: "6rem",
     //padding: "5rem 7rem 5rem 7rem",
     //flexGrow: "1",
   };
@@ -112,19 +113,28 @@ export default function Card({
     //maxWidth: "34ch",
     textWrap: "balance",
   };
-  // const imgCellStyle = {
-  //   //flexGrow: "1",
-  //   display: "inline",
-  //   width: "40%",
-  //   maxWidth: "40%",
-  // };
+  const imgCellStyle = {
+    // display: "inline",
+    // minHeight: "100%",
+  };
   const imgStyle = {
-    display: "inline",
-    width: "100%",
-    // height: "100%",
+    // display: "block",
+    // width: "100%",
+    width: "40svw",
+    height: "100%",
     objectFit: "cover" as "cover",
     transformOrigin: "top center",
   };
+//  const imgStyle = {
+//    // display: "block",
+//    // width: "100%",
+//    width: "100%",
+//    height: "34rem",
+//    maxHeight: "34rem",
+//    objectFit: "cover" as "cover",
+//    objectPosition: "50% -70px",
+//    transformOrigin: "top center",
+//  };
   const ctaStyle = {
     display: "block",
     color: "#efe9e0",
@@ -141,12 +151,12 @@ export default function Card({
   };
   const ctaBallStyle = {
     position: "absolute" as "absolute",
-    right: "2rem",
-    width: "10ch",
+    right: "4rem",
+    width: "9ch",
     //height: "12ch",
     padding: "2.5rem 1.25rem",
 //    padding: "4rem",
-    bottom: "-6rem",
+    bottom: "-4rem",
     rotate: "15deg",
     color: "#efe9e0",
     backgroundColor: "#ab6c5b",
@@ -168,10 +178,10 @@ export default function Card({
             <div>
               <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
             </div>
-            {ctaText && <a style={ctaStyle} href={ctaUrl}>{ctaText}</a>}
+            {/* {ctaText && <a style={ctaStyle} href={ctaUrl}>{ctaText}</a>} */}
           </span>
           {/* <span style={imgCellStyle}> */}
-          <span className='imgCellStyle'>
+          <span className='imgCellStyle' style={imgCellStyle}>
             <img style={imgStyle} src={image_url}></img>
           </span>
         </div>
@@ -182,7 +192,7 @@ export default function Card({
       <section style={entryStyle}>
         <div className="rowStyle">
           {/* <span style={imgCellStyle}> */}
-          <span className="imgCellStyle">
+          <span className="imgCellStyle" style={imgCellStyle}>
             <img style={imgStyle} src={image_url}></img>
           </span>
           <span className='cardTextCell' style={txtCellStyle}>

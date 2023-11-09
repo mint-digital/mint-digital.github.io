@@ -57,6 +57,7 @@ export default function Quote({
             fontSize: "1.75rem",
             display: "block",
             marginTop: "0rem",
+            maxWidth: "50ch",
           }}
         >
           {children}
@@ -159,20 +160,21 @@ export default function Quote({
   const quoteContainerStyle = {
     //width: "auto",
     alignSelf: "center" as "center",
-    padding: "0rem 0rem",
+    padding: "4rem 0rem",
   };
   const textContainerStyle = {
     //width: "auto",
     //width: "56rem",
-    padding: "4rem 5rem",
+    padding: "6rem",
   };
   const quoteTitleStyleCentered = {
     display: "block",
     color: textColor.value,
-    textAlign: "left" as "left",
+//    textAlign: "left" as "left",
+    textAlign: "center" as "center",
     fontSize: "3rem",
     fontStyle: "bold",
-    fontWeight: "700",
+    fontWeight: "900",
 //    lineHeight: "4rem",
     margin: "0",
     padding: "0",
@@ -183,6 +185,7 @@ export default function Quote({
     display: "inline-block",
     color: textColor.value,
     textAlign: "left" as "left",
+//    textAlign: "center" as "center",
     fontSize: "4rem",
     fontStyle: "bold",
     fontWeight: "700",
@@ -195,13 +198,14 @@ export default function Quote({
   const quoteStyle = {
     display: "inline-block",
     color: textColor.value,
-    textAlign: "left" as "left",
+//    textAlign: "left" as "left",
+    textAlign: "center" as "center",
     fontSize: "2rem",
     //fontStyle: "italic",
     fontWeight: "400",
     margin: "0",
     padding: "0 0rem 0rem 0rem",
-    //maxWidth: "58rem",
+    maxWidth: "58rem",
   };
   const paragraphStyle = {
     color: textColor.value,
