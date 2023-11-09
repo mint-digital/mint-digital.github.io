@@ -1,5 +1,6 @@
 ---
 import Cards from "../components/Cards";
+import Team from "../components/Team";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { fetchCards, fetchHeader, fetchFooter } from "../utils/contentful";
@@ -25,6 +26,22 @@ import { fetchCards, fetchHeader, fetchFooter } from "../utils/contentful";
 //const bright = Astro.url.searchParams.get('bright')! || '60';
 
 const cards = { cards: await fetchCards() };
+const team = {
+	team: {
+		textColor: "",
+		backgroundColor: "",
+		members: [
+			{
+				title: "asdf",
+				text: "Manager",
+				image_url: "",
+				backgroundColor: "",
+				textColor: "",
+				linkedin_url: "",
+			}
+		]
+	}
+};
 const headProps = {
 	videoNumber: 0,
 	bright: 90,
@@ -32,7 +49,6 @@ const headProps = {
 };
 const footProps = { footProps: await fetchFooter() };
 
-const searchParams = new URLSearchParams(Astro.request.url);
 ---
 
 <html lang="en">
@@ -82,11 +98,11 @@ const searchParams = new URLSearchParams(Astro.request.url);
 				}
 			}
 
-			@media screen and (max-width: 550px),
-			screen and (max-height: 200px) {
+			@media screen and (max-width: 600px),
+			screen and (max-height: 350px) {
 				html,
 				body {
-					font-size: 8px;
+					font-size: 7px;
 				}
 			}
 		</style>
@@ -96,6 +112,7 @@ const searchParams = new URLSearchParams(Astro.request.url);
 		<main style="display: flex; flex-direction: column; align-items: center">
 			<Header {...headProps} client:visible />
 			<Cards {...cards} client:visible />
+			<Team {...team} client:visible />
 			<Footer {...footProps} client:visible />
 		</main>
 	</body>

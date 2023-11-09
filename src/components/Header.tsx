@@ -96,7 +96,7 @@ export default function Header({
     alignSelf: "start",
     padding: "2rem 2rem 0 2rem",
     zIndex: "100",
-    filter: "drop-shadow(0 0 .15rem lightslategray)",
+    filter: "drop-shadow(0 0 .25rem lightslategray)",
   };
 //  const txtCellStyle = {
 //    position: "absolute" as "absolute",
@@ -146,7 +146,7 @@ export default function Header({
     fontWeight: "700",
     fontStyle: "bold",
     maxWidth: "10ch",
-    filter: "drop-shadow(0 0 .15rem lightslategray)",
+    filter: "drop-shadow(0 0 .25rem lightslategray)",
   };
   const subHeadlineStyle = {
   //  alignSelf: "bottom",
@@ -163,7 +163,7 @@ export default function Header({
 //    width: "ch",
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
-    filter: "drop-shadow(0 0 .15rem lightslategray)",
+    filter: "drop-shadow(0 0 .25rem lightslategray)",
   };
 
   const arrowStyle = {
