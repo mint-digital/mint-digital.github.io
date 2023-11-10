@@ -11,6 +11,7 @@ export default function Team({
     flexDirection: "column" as "column",
     backgroundColor: team.backgroundColor,
     padding: "6rem 0",
+    width: "100%",
     margin: 0,
   };
   const teamContainerStyle = {
@@ -24,7 +25,7 @@ export default function Team({
     gap: "1rem",
   };
   const teamImgStyle = {
-    padding: "2rem",
+    padding: "2rem 2rem 1rem 2rem",
     width: "15rem",
   };
   const headerStyleCentered = {
@@ -43,8 +44,9 @@ export default function Team({
     textAlign: "center" as "center",
   };
   const nameStyle = {
-    fontSize: "1.75rem",
-    fontWeight: "400",
+    fontSize: "2rem",
+    fontWeight: "700",
+    lineHeight: "3rem",
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
     color: team.textColor,
@@ -52,12 +54,13 @@ export default function Team({
   const titleStyle = {
     color: team.textColor,
     textAlign: "center" as "center",
-    fontSize: "1.5rem",
+    fontSize: "1.25rem",
     fontWeight: "400",
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
     margin: "0",
     padding: "0 0rem 0rem 0rem",
+    fontStyle: "italic",
   };
   const iconStyle = {
     display: "flex",
@@ -74,14 +77,14 @@ export default function Team({
     <section className='TeamContainer' style={entryStyle}>
       <h2 style={headerStyleCentered}>Vi är mint</h2>
       <div style={teamContainerStyle}>
-        {team.members.map(function (entry, i) {
+        {team.members.items.map(function (entry, i) {
           return <div key={i} style={entryContainerStyle}>
-            <a href={entry.linkedin_url} target='_blank'><img src={entry.image_url} style={teamImgStyle}></img></a>
-            <div style={nameStyle}>{entry.name}</div>
-            <div style={titleStyle}>{entry.title}</div>
+            <a href={entry.fields.linkedInUrl} target='_blank'><img src={entry.fields.profileImage.fields.file.url} style={teamImgStyle}></img></a>
+            <div style={nameStyle}>{entry.fields.name}</div>
+            <div style={titleStyle}>{entry.fields.title}</div>
             <div style={iconStyle}>
-              <a href='mailto://hej@mint.se' target='_blank'><img src='../img/email-svgrepo-com_color.svg' style={linkedInStyle}></img></a>
-              <a href={entry.linkedin_url} target='_blank'><img src='../img/iconmonstr-linkedin-3_color.svg' style={linkedInStyle}></img></a>
+              <a href={entry.fields.email} target='_blank'><img src='../img/email-svgrepo-com_color.svg' style={linkedInStyle}></img></a>
+              <a href={entry.fields.linkedInUrl} target='_blank'><img src='../img/iconmonstr-linkedin-3_color.svg' style={linkedInStyle}></img></a>
             </div>
           </div>
         })}

@@ -23,6 +23,23 @@ export const fetchCards = async () => {
   return entries;
 };
 
+
+export const fetchTeam = async () => {
+  const entries = await 
+    client
+    .getEntries({
+      content_type: 'teamMember'
+    })
+    .then((response) => {
+      response.items.sort((a, b) => {
+        return (a.fields.order as number) - (b.fields.order as number)
+      });
+      return response;
+    })
+    .catch((err) => console.log(err));
+  return entries;
+};
+
 export const fetchHeader = async () => {
   return await 
     client

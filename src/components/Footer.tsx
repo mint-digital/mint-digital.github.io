@@ -17,58 +17,70 @@ export default function Footer({
   };
   const rowStyle = {
     display: "flex",
-    flexDirection: "row" as "row",
+    flexDirection: "column" as "column",
     justifyContent: "center" as "center",
     alignItems: "center" as "center",
+    textAlign: "center" as "center",
   };
   const profileStyle = {
-    width: "15rem",
-    height: "15rem",
-    padding: "auto",
-    margin: "6rem",
+    width: "10rem",
+    height: "10rem",
+    padding: "0",
+    margin: "6rem 0 2rem 0",
   };
   const txtCellStyle = {
     alignContent: "flex-start" as "flex-start",
+    justifyContent: "center" as "center",
+    textAlign: "center" as "center",
   };
   const titleStyle = {
     color: footProps.textColor.value,
-    padding: "0 2rem 0",
+    padding: "0 2rem 0 2rem",
     margin: "0",
     fontSize: "2rem",
     lineHeight: "2rem",
     fontWeight: "700",
     fontStyle: "bold",
-    width: "20ch",
+    textTransform: "uppercase" as "uppercase",
+    letterSpacing: "0.2rem",
+//    width: "20ch",
+//    width: "100%",
+  };
+  const linkedInStyle = {
+    width: "6rem",
+    padding: "2rem 0 0 0",
   };
   const subheaderStyle = {
     color: footProps.textColor.value,
-    padding: "2rem 2rem 0",
+    padding: "1rem 2rem 0 2rem",
     margin: "0",
     fontSize: "1.25rem",
     fontWeight: "700",
-    width: "28ch",
-    textTransform: "uppercase" as "uppercase",
-    letterSpacing: "0.2rem",
+//    width: "28ch",
+//    textTransform: "uppercase" as "uppercase",
+//    letterSpacing: "0.2rem",
+//    width: "100%",
   };
   const contactStyle = {
     color: footProps.textColor.value,
-    padding: "0 2rem 0",
+    padding: "0",
     fontSize: "1.25rem",
     fontWeight: "400",
-    width: "28ch",
+//    width: "28ch",
+//    width: "100%",
   };
 
 	return (
     <section id="kompis" style={entryStyle}>
       <div style={rowStyle}>
-        <img style={profileStyle} src={footProps.image.fields.file.url}></img>
+        <img style={profileStyle} src="../img/mint_logo_v1_light.png"></img>
         <span style={txtCellStyle}>
           <h1 style={titleStyle}>{footProps.title}</h1>
           <div>
-            <p style={subheaderStyle}>Kontakta oss idag</p>
-            <a style={contactStyle} href="mailto:hej@mint.se">hej@mint.se</a>
-            <p style={subheaderStyle}>Mats Saxer</p>
-            <a style={contactStyle} href="callto:hej@mint.se">072 - 44 76 700</a>
+            <p style={subheaderStyle}>Kontakta oss idag:&nbsp;
+            <a style={contactStyle} href="mailto:hej@mint.se">hej@mint.se</a></p>
+            <a href="https://www.linkedin.com/company/mintse/"><img style={linkedInStyle} src="../img/iconmonstr-linkedin-3_color.svg"></img></a>
+            <p style={subheaderStyle}>© Mint, 2023</p>
           </div>
         </span>
       </div>
