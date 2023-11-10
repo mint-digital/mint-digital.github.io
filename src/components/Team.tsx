@@ -34,7 +34,7 @@ export default function Team({
     textAlign: "center" as "center",
     fontSize: "4rem",
     fontStyle: "bold",
-    fontWeight: "700",
+    fontWeight: "900",
     lineHeight: "4rem",
     margin: "0",
     padding: "0 0 2rem 0",
