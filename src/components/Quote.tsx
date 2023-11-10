@@ -57,7 +57,7 @@ export default function Quote({
             fontSize: "1.75rem",
             display: "block",
             marginTop: "0rem",
-            maxWidth: "50ch",
+            maxWidth: "45ch",
           }}
         >
           {children}
