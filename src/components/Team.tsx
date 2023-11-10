@@ -10,22 +10,22 @@ export default function Team({
     display: "flex",
     flexDirection: "column" as "column",
     backgroundColor: team.backgroundColor,
-    padding: "4rem",
+    padding: "4rem 0",
     margin: 0,
-    width: "100%",
   };
   const teamContainerStyle = {
     display: "flex",
     flexDirection: "row" as "row",
     fleWrap: "wrap",
     flexFlow: "row wrap",
-    padding: "0rem 6rem",
+    padding: "0rem 0rem",
     maxWidth: "100svw",
     justifyContent: "center" as "center",
+    gap: "1rem",
   };
   const teamImgStyle = {
     padding: "2rem",
-    width: "20rem",
+    width: "15rem",
   };
   const headerStyleCentered = {
     display: "block",
@@ -71,7 +71,7 @@ export default function Team({
   };
 
   return (
-    <section className='TeanContainer' style={entryStyle}>
+    <section className='TeamContainer' style={entryStyle}>
       <h2 style={headerStyleCentered}>Vi är mint</h2>
       <div style={teamContainerStyle}>
         {team.members.map(function (entry, i) {

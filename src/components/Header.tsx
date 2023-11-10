@@ -117,6 +117,7 @@ export default function Header({
     flexDirection: "column" as "column",
     position: "absolute" as "absolute",
     width: "100%",
+    //width: "100svw",
     height: "100svh",
     bottom: "0",
 //    alignItems: "bottom",
@@ -128,7 +129,7 @@ export default function Header({
 //    alignItems: "center" as "center",
 //    justifyContent: "flex-end" as "flex-end",
     justifyContent: "center" as "center",
-    padding: "0",
+    //padding: "0 2rem",
     zIndex: "100",
   };
   const titleStyle = {
@@ -165,6 +166,7 @@ export default function Header({
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
     filter: "drop-shadow(0 0 .25rem lightslategray)",
+    margin: "0 2rem",
   };
 
   const arrowStyle = {
