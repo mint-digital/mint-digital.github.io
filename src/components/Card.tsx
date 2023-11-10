@@ -196,7 +196,7 @@ export default function Card({
             <img style={imgStyle} src={image_url}></img>
           </span>
           <span className='cardTextCell' style={txtCellStyle}>
-            <a style={ctaBallStyle} href={ctaUrl}>{ctaText}</a>
+            <a className="cta-ball"  href={ctaUrl}>{ctaText}</a>
             <h1 style={titleStyle}>{title}</h1>
             <div>
               <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
