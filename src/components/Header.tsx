@@ -95,7 +95,8 @@ export default function Header({
 
     width: "8rem",
     alignSelf: "start",
-    padding: "2rem 2rem 0 2rem",
+//    padding: "2rem 2rem 0 2rem",
+    margin: "2rem 2rem 0 2rem",
     zIndex: "100",
     filter: "drop-shadow(0 0 .25rem lightslategray)",
   };
