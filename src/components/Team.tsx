@@ -10,7 +10,7 @@ export default function Team({
     display: "flex",
     flexDirection: "column" as "column",
     backgroundColor: team.backgroundColor,
-    padding: "4rem 0",
+    padding: "6rem 0",
     margin: 0,
   };
   const teamContainerStyle = {

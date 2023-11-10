@@ -154,18 +154,18 @@ export default function Quote({
     backgroundColor: backgroundColor.value,
     //justifyContent: "center" as "center",
     //minWidth: "50rem",
-    padding: "3rem 2rem",
+    padding: "6rem",
     margin: 0,
   };
   const quoteContainerStyle = {
     //width: "auto",
     alignSelf: "center" as "center",
-    padding: "4rem 0rem",
+    padding: "0rem",
   };
   const textContainerStyle = {
     //width: "auto",
     //width: "56rem",
-    padding: "6rem",
+    padding: "0rem",
   };
   const quoteTitleStyleCentered = {
     display: "block",

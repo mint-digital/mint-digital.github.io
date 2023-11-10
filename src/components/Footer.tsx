@@ -25,7 +25,7 @@ export default function Footer({
     width: "15rem",
     height: "15rem",
     padding: "auto",
-    margin: "4rem",
+    margin: "6rem",
   };
   const txtCellStyle = {
     alignContent: "flex-start" as "flex-start",
