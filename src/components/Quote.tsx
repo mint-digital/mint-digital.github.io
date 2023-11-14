@@ -154,7 +154,7 @@ export default function Quote({
     backgroundColor: backgroundColor.value,
     //justifyContent: "center" as "center",
     //minWidth: "50rem",
-    padding: "6rem 4rem",
+    padding: "6rem 6rem",
     margin: 0,
   };
   const quoteContainerStyle = {
@@ -210,7 +210,8 @@ export default function Quote({
   const paragraphStyle = {
     color: textColor.value,
     textAlign: "left" as "left",
-    fontSize: "1.75rem",
+    fontSize: "2rem",
+    lineHeight: "2.75rem",
     //fontStyle: "italic",
     fontWeight: "400",
     margin: "0",

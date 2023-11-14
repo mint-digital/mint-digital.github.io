@@ -89,7 +89,7 @@ export default function Card({
   const txtCellStyle = {
     display: "inline-block",
     position: "relative" as "relative",
-    padding: "6rem 4rem",
+    padding: "6rem 6rem",
     //padding: "5rem 7rem 5rem 7rem",
     //flexGrow: "1",
   };
@@ -108,8 +108,9 @@ export default function Card({
     display: "block",
     color: textColor.value,
     padding: "0 0rem 2rem 0",
-    fontSize: "1.75rem",
+    fontSize: "2rem",
     fontWeight: "400",
+    lineHeight: "2.75rem",
     //maxWidth: "34ch",
     textWrap: "balance",
   };

@@ -19,14 +19,15 @@ export default function Team({
     flexDirection: "row" as "row",
     fleWrap: "wrap",
     flexFlow: "row wrap",
-    padding: "0rem 0rem",
     maxWidth: "100svw",
+    // padding: "0rem 0rem",
+    padding: "0rem 6rem",
     justifyContent: "center" as "center",
-    gap: "1rem",
+    gap: "4rem",
   };
   const teamImgStyle = {
     padding: "2rem 2rem 1rem 2rem",
-    width: "15rem",
+    width: "12rem",
   };
   const headerStyleCentered = {
     display: "block",
@@ -44,9 +45,9 @@ export default function Team({
     textAlign: "center" as "center",
   };
   const nameStyle = {
-    fontSize: "2rem",
+    fontSize: "1.25rem",
     fontWeight: "700",
-    lineHeight: "3rem",
+    lineHeight: "2rem",
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
     color: team.textColor,
@@ -81,7 +82,8 @@ export default function Team({
           return <div key={i} style={entryContainerStyle}>
             <a href={entry.fields.linkedInUrl} target='_blank'><img src={entry.fields.profileImage.fields.file.url} style={teamImgStyle}></img></a>
             <div style={nameStyle}>{entry.fields.name}</div>
-            <div style={titleStyle}>{entry.fields.title}</div>
+            <div style={nameStyle}>{entry.fields.surname}</div>
+            {/* <div style={titleStyle}>{entry.fields.title}</div> */}
             <div style={iconStyle}>
               <a href={entry.fields.email} target='_blank'><img src='../img/email-svgrepo-com_color.svg' style={linkedInStyle}></img></a>
               <a href={entry.fields.linkedInUrl} target='_blank'><img src='../img/iconmonstr-linkedin-3_color.svg' style={linkedInStyle}></img></a>
