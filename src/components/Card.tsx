@@ -77,9 +77,13 @@ export default function Card({
     },
   };
 
+  const outerStyle = {
+    backgroundColor: backgroundColor.value,
+    // padding: "0 4rem 0 4rem",
+  };
+
   const entryStyle = {
     backgroundColor: backgroundColor.value,
-    padding: 0,
     margin: 0,
     display: "grid",
     gridTemplateColumns: "auto fit-content(2000px) auto",
@@ -187,6 +191,7 @@ export default function Card({
 
   if(alignImageRight) {
     return (
+      <div style={outerStyle}>
       <section style={entryStyle}>
         <div className='leftPad'></div>
         <div className="rowStyle">
@@ -204,9 +209,11 @@ export default function Card({
         </div>
         <div className='rightPad'></div>
       </section>
+    </div>
     );
   } else {
     return (
+      <div style={outerStyle}>
       <section style={entryStyle}>
         <div className='leftPad'></div>
         <div className="rowStyle">
@@ -225,6 +232,7 @@ export default function Card({
         </div>
         <div className='rightPad'></div>
       </section>
+      </div>
     );
   }
 }

@@ -1,11 +1,11 @@
-section {
-  padding: 2rem; 
-}
+/* section { */
+  /* padding: 2rem;  */
+/* } */
 
-.cardTextCell {
+.cardTextCell { 
   /* padding: 5rem 7rem 5rem 7rem; */
   /* padding: 6rem 6rem 6rem 6rem; */
-  padding: 4rem;
+  padding: 4rem 0 4rem 0;
 }
 
 
@@ -13,6 +13,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 4rem;
 }
 
 .cta-ball {

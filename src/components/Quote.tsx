@@ -173,7 +173,7 @@ export default function Quote({
     flexDirection: "column" as "column",
     //width: "auto",
     //width: "56rem",
-    padding: "0 4rem 0 4rem",
+    // padding: "4rem",
   };
   const quoteTitleStyleCentered = {
     display: "block",
