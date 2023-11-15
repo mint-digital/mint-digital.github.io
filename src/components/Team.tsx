@@ -11,8 +11,9 @@ export default function Team({
     flexDirection: "column" as "column",
     backgroundColor: team.backgroundColor,
     padding: "6rem 0",
+//    margin: "6rem 0",
     width: "100%",
-    margin: 0,
+   // margin: 0,
   };
   const teamContainerStyle = {
     display: "flex",
@@ -21,12 +22,14 @@ export default function Team({
     flexFlow: "row wrap",
     maxWidth: "100svw",
     // padding: "0rem 0rem",
-    padding: "0rem 6rem",
+    margin: "0rem 6rem",
+    //padding: "0rem 6rem",
     justifyContent: "center" as "center",
     gap: "4rem",
   };
   const teamImgStyle = {
-    padding: "2rem 2rem 1rem 2rem",
+    // padding: "2rem 2rem 1rem 2rem",
+    margin: "2rem 2rem 1rem 2rem",
     width: "12rem",
   };
   const headerStyleCentered = {
@@ -37,8 +40,9 @@ export default function Team({
     fontStyle: "bold",
     fontWeight: "900",
     lineHeight: "4rem",
-    margin: "0",
-    padding: "0 0 2rem 0",
+    //margin: "0",
+//    padding: "0 0 2rem 0",
+    margin: "0 0 2rem 0",
   };
   const entryContainerStyle = {
     color: team.textColor,
@@ -67,7 +71,8 @@ export default function Team({
     display: "flex",
     flexDirection: "row" as "row",
     justifyContent: "center",
-    padding: "1rem",
+//    padding: "1rem",
+    margin: "1rem",
     gap: "1rem",
   };
   const linkedInStyle = {

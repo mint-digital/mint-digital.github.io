@@ -144,11 +144,13 @@ const footProps = { footProps: await fetchFooter() };
 	</head>
 	<script></script>
 	<body>
-		<main style="display: flex; flex-direction: column; align-items: center">
-			<Header {...headProps} client:visible />
-			<Cards {...cards} client:visible />
-			<Team {...team} client:visible />
-			<Footer {...footProps} client:visible />
+		<!-- <main style="display: flex; flex-direction: column; align-items: center"> -->
+		<!-- <main style="display: grid; grid-template-columns: auto 1800px auto;"> -->
+		<main>
+				<Header {...headProps} client:visible />
+				<Cards {...cards} client:visible />
+				<Team {...team} client:visible />
+				<Footer {...footProps} client:visible />
 		</main>
 	</body>
 </html>

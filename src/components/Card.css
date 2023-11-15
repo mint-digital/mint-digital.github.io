@@ -3,43 +3,29 @@ section {
 }
 
 .cardTextCell {
-  padding: 5rem 7rem 5rem 7rem;
+  /* padding: 5rem 7rem 5rem 7rem; */
+  /* padding: 6rem 6rem 6rem 6rem; */
+  padding: 4rem;
 }
 
-/* .imgCellStyle { */
-  /* display: inline;  */
-  /* width: 100%; */
-  /* max-height: 30rem; */
-/* } */
 
 .rowStyle {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-};
-
-.imgCellStyle {
-  /* position: relative; */
-  object-fit: cover;
-  overflow: hidden;
-  /* max-height: 40rem; */
-  object-position: 50% 50%;
-
-  width: 40%;
-  /* min-width: 100%; */
 }
 
 .cta-ball {
   position: absolute;
   right: 4rem;
   width: 9ch;
-  padding: 2.5rem 1.25rem;
-  bottom: -4rem;
+  padding: 2rem 1.25rem;
+  bottom: -5rem;
   rotate: 15deg;
   color: #efe9e0;
   background-color: #ab6c5b;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   text-decoration: none;
   text-align: center;

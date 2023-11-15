@@ -148,24 +148,32 @@ export default function Quote({
   };
 
   const entryStyle = {
-    display: "flex",
-    flexDirection: "column" as "column",
+//    display: "flex",
+//    flexDirection: "column" as "column",
     //alignItems: "center" as "center",
     backgroundColor: backgroundColor.value,
     //justifyContent: "center" as "center",
     //minWidth: "50rem",
-    padding: "6rem 6rem",
-    margin: 0,
+//    padding: "6rem 6rem",
+    padding: "4rem",
+    //margin: "6rem 6rem",
+    //margin: 0,
+    display: "grid",
+    gridTemplateColumns: "auto fit-content(2000px) auto",
   };
   const quoteContainerStyle = {
+    display: "flex",
+    flexDirection: "column" as "column",
     //width: "auto",
     alignSelf: "center" as "center",
     padding: "0rem",
   };
   const textContainerStyle = {
+    display: "flex",
+    flexDirection: "column" as "column",
     //width: "auto",
     //width: "56rem",
-    padding: "0rem",
+    padding: "0 4rem 0 4rem",
   };
   const quoteTitleStyleCentered = {
     display: "block",
@@ -222,11 +230,13 @@ export default function Quote({
 
 	return (
     <section className='Quote' style={entryStyle}>
+      <div className='leftPad'></div>
       <div style={isQuote ? quoteContainerStyle : textContainerStyle}>
         <h1 style={isQuote ? quoteTitleStyleCentered : titleStyleCentered}>{title}</h1>
         { text && isQuote && <span style={quoteStyle}>{documentToReactComponents(text, quoteOptions)}</span>}
         { text && !isQuote && <div style={paragraphStyle}>{documentToReactComponents(text, options)}</div>}
       </div>
+      <div className='rightPad'></div>
     </section>
 	);
 }

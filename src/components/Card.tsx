@@ -81,6 +81,9 @@ export default function Card({
     backgroundColor: backgroundColor.value,
     padding: 0,
     margin: 0,
+    display: "grid",
+    gridTemplateColumns: "auto fit-content(2000px) auto",
+    // overflow: "hidden",
   };
   // const rowStyle = {
   //   display: "flex",
@@ -89,7 +92,8 @@ export default function Card({
   const txtCellStyle = {
     display: "inline-block",
     position: "relative" as "relative",
-    padding: "6rem 6rem",
+    //padding: "6rem 6rem",
+    //margin: "6rem 6rem",
     //padding: "5rem 7rem 5rem 7rem",
     //flexGrow: "1",
   };
@@ -107,7 +111,8 @@ export default function Card({
   const abstractStyle = {
     display: "block",
     color: textColor.value,
-    padding: "0 0rem 2rem 0",
+    //padding: "0 0rem 2rem 0",
+    //margin: "0 0rem 2rem 0",
     fontSize: "2rem",
     fontWeight: "400",
     lineHeight: "2.75rem",
@@ -117,11 +122,20 @@ export default function Card({
   const imgCellStyle = {
     // display: "inline",
     // minHeight: "100%",
+//    padding: "0rem 6rem 0rem 6rem",
+  /* position: relative; */
+    objectFit: "cover" as "cover",
+    // overflow: "hidden",
+    /* max-height: 40rem; */
+    objectPosition: "50% 50%",
+    width: "100%",
+    /* min-width: 100%; */
   };
   const imgStyle = {
     // display: "block",
     // width: "100%",
-    width: "40svw",
+    // width: "40svw",
+    width: "100%",
     height: "100%",
     objectFit: "cover" as "cover",
     transformOrigin: "top center",
@@ -147,8 +161,9 @@ export default function Card({
     textAlign: "center" as "center",
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
-    margin: "0rem 0 0 0",
-    padding: "2rem 2rem 2rem 2rem",
+    //margin: "0rem 0 0 0",
+    //padding: "2rem 2rem 2rem 2rem",
+    margin: "2rem 2rem 2rem 2rem",
   };
   const ctaBallStyle = {
     position: "absolute" as "absolute",
@@ -157,7 +172,7 @@ export default function Card({
     //height: "12ch",
     padding: "2.5rem 1.25rem",
 //    padding: "4rem",
-    bottom: "-4rem",
+    bottom: "-2rem",
     rotate: "15deg",
     color: "#efe9e0",
     backgroundColor: "#ab6c5b",
@@ -173,6 +188,7 @@ export default function Card({
   if(alignImageRight) {
     return (
       <section style={entryStyle}>
+        <div className='leftPad'></div>
         <div className="rowStyle">
           <span className='cardTextCell' style={txtCellStyle}>
             <h1 style={titleStyle}>{title}</h1>
@@ -186,18 +202,20 @@ export default function Card({
             <img style={imgStyle} src={image_url}></img>
           </span>
         </div>
+        <div className='rightPad'></div>
       </section>
     );
   } else {
     return (
       <section style={entryStyle}>
+        <div className='leftPad'></div>
         <div className="rowStyle">
           {/* <span style={imgCellStyle}> */}
           <span className="imgCellStyle" style={imgCellStyle}>
             <img style={imgStyle} src={image_url}></img>
           </span>
           <span className='cardTextCell' style={txtCellStyle}>
-            <a className="cta-ball"  href={ctaUrl}>{ctaText}</a>
+            <a className='cta-ball' href={ctaUrl}>{ctaText}</a>
             <h1 style={titleStyle}>{title}</h1>
             <div>
               <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
@@ -205,6 +223,7 @@ export default function Card({
             {/* {ctaText && <a style={ctaStyle} href={ctaUrl}>{ctaText}</a>} */}
           </span>
         </div>
+        <div className='rightPad'></div>
       </section>
     );
   }

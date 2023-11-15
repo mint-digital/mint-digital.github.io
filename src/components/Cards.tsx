@@ -34,9 +34,11 @@ export default function Cards({
     listStyleType: "none",
     padding: "0",
     margin: "0",
+    overflow: "hidden",
 //    maxWidth: "1400px",
 //    minWidth: "496px",
   }
 //  return (<ul style={ulStyle}>{cs}</ul>);
-  return (<div style={ulStyle}>{cs}</div>);
+//  return (<div style={ulStyle}>{cs}</div>);
+  return cs;
 }

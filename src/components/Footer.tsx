@@ -11,7 +11,8 @@ export default function Footer({
     backgroundColor: footProps.backgroundColor.value,
 //    padding: "0 0 30rem 0",
     padding: "0 0 6rem 0",
-    margin: 0,
+    //margin: "0 0 6rem 0",
+    // margin: 0,
     width: "100%",
 //    maxWidth: "1400px",
     //minWidth: "496px",
@@ -26,8 +27,9 @@ export default function Footer({
   const profileStyle = {
     width: "10rem",
     height: "10rem",
-    padding: "0",
-    margin: "6rem 0 2rem 0",
+//    padding: "0",
+    padding: "6rem 0 2rem 0",
+//    margin: "6rem 0 2rem 0",
   };
   const txtCellStyle = {
     alignContent: "flex-start" as "flex-start",
@@ -37,7 +39,8 @@ export default function Footer({
   const titleStyle = {
     color: footProps.textColor.value,
     padding: "0 2rem 0 2rem",
-    margin: "0",
+    //margin: "0 2rem 0 2rem",
+//    margin: "0",
     fontSize: "2rem",
     lineHeight: "2rem",
     fontWeight: "700",
@@ -50,11 +53,13 @@ export default function Footer({
   const linkedInStyle = {
     width: "6rem",
     padding: "2rem 0 0 0",
+    //margin: "2rem 0 0 0",
   };
   const subheaderStyle = {
     color: footProps.textColor.value,
     padding: "1rem 2rem 0 2rem",
-    margin: "0",
+//    margin: "1rem 2rem 0 2rem",
+//    margin: "0",
     fontSize: "1.25rem",
     fontWeight: "700",
 //    width: "28ch",

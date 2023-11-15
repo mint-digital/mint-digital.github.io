@@ -52,7 +52,7 @@ export default function Header({
     backgroundImage: "url(../img/drone_flight_reverse.png)",
     backgroundSize: "cover",
     backgroundPosition: "center bottom",
-    padding: "0 0 0rem 0",
+//    padding: "0 0 0rem 0",
     margin: 0,
     //height: "32rem",
     width: "100%",
@@ -142,7 +142,7 @@ export default function Header({
 //    margin: "0 auto 3rem",
     margin: "0",
 //    fontSize: "5rem",
-    fontSize: "8rem",
+    fontSize: "7rem",
 //    lineHeight: "8rem",
     lineHeight: "8rem",
 //    lineHeight: "5rem",
@@ -157,8 +157,8 @@ export default function Header({
 //    bottom: "0",
     color: headProps.textColor.value,
 //    margin: "0rem auto 0",
-//    margin: "2rem 0 2rem 0",
-    padding: "2rem 0 2rem 0",
+    margin: "2rem 0 2rem 0",
+//    padding: "2rem 0 2rem 0",
 //    fontSize: "1.25rem",
 //    fontSize: "2rem",
     fontSize: "1.75rem",
@@ -167,7 +167,7 @@ export default function Header({
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
     filter: "drop-shadow(0 0 .25rem lightslategray)",
-    margin: "0 2rem",
+    //margin: "0 2rem",
   };
 
   const arrowStyle = {
