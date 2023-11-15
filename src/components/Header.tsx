@@ -214,7 +214,8 @@ export default function Header({
         {/* <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4" /> */}
         <source src={videoFile} type="video/mp4" />
       </video>
-      <img style={imgStyle} src="../img/mint_logo_v1_light.png" />
+      {/* <img style={imgStyle} src="../img/mint_logo_v1_light.png" /> */}
+      <img style={imgStyle} src="../img/mint_logo_postitiv_RGB.svg" />
       <div style={txtCellStyle}>
         <h1 className='header-title' style={titleStyle}>{headProps.headline}</h1>
         <div style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline)}</div>

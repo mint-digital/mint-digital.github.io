@@ -79,7 +79,8 @@ export default function Footer({
 	return (
     <section id="kompis" style={entryStyle}>
       <div style={rowStyle}>
-        <img style={profileStyle} src="../img/mint_logo_v1_light.png"></img>
+        {/* <img style={profileStyle} src="../img/mint_logo_v1_light.png"></img> */}
+        <img style={profileStyle} src="../img/mint_logo_postitiv_RGB.svg"></img>
         <span style={txtCellStyle}>
           <h1 style={titleStyle}>{footProps.title}</h1>
           <div>
