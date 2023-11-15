@@ -36,7 +36,7 @@ export default function Team({
     display: "block",
     color: team.textColor,
     textAlign: "center" as "center",
-    fontSize: "4rem",
+    fontSize: "4.5rem",
     fontStyle: "bold",
     fontWeight: "900",
     lineHeight: "4rem",

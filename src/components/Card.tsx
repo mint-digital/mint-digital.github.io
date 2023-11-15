@@ -86,8 +86,10 @@ export default function Card({
     backgroundColor: backgroundColor.value,
     margin: 0,
     display: "grid",
-    gridTemplateColumns: "auto fit-content(2000px) auto",
+//    gridTemplateColumns: "minmax(4rem, auto) fit-content(1600px) minmax(4rem, auto)",
+    gridTemplateColumns: "auto fit-content(1600px) auto",
     // overflow: "hidden",
+    // gap: "6rem",
   };
   // const rowStyle = {
   //   display: "flex",
