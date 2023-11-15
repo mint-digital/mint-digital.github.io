@@ -20,10 +20,12 @@ export default function Team({
     flexDirection: "row" as "row",
     fleWrap: "wrap",
     flexFlow: "row wrap",
-    maxWidth: "100svw",
+//    maxWidth: "100svw",
+    maxWidth: "40svw",
     // padding: "0rem 0rem",
     margin: "0rem 6rem",
     //padding: "0rem 6rem",
+    alignSelf: "center",
     justifyContent: "center" as "center",
     gap: "4rem",
   };
