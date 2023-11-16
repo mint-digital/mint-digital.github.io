@@ -74,7 +74,7 @@ export default function Header({
     objectFit: "cover" as "cover",
     objectPosition: "center center",
 
-    transform: "rotateY(180deg)",
+//    transform: "rotateY(180deg)",
 
 //    height: "32rem",
     height: "100svh",
@@ -204,7 +204,7 @@ export default function Header({
     break;
     default:
       console.log('default case: ' + videoNumber);
-      videoFile = "../img/vid_2.mp4";
+      videoFile = "../img/vid_2_flipped.mp4";
   };
 
   console.log('videoFile: ' + videoFile);
