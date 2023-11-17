@@ -87,7 +87,7 @@ export default function Card({
     margin: 0,
     display: "grid",
 //    gridTemplateColumns: "minmax(4rem, auto) fit-content(1600px) minmax(4rem, auto)",
-    gridTemplateColumns: "auto fit-content(1400px) auto",
+    gridTemplateColumns: "auto fit-content(1600px) auto",
     // overflow: "hidden",
     // gap: "6rem",
   };
@@ -99,16 +99,18 @@ export default function Card({
     display: "inline-block",
     position: "relative" as "relative",
     //padding: "6rem 6rem",
+    padding: "4rem 4rem",
     //margin: "6rem 6rem",
     //padding: "5rem 7rem 5rem 7rem",
     //flexGrow: "1",
+    width: "50%",
   };
   const titleStyle = {
     color: textColor.value,
     padding: "0 0rem 0",
     margin: "0rem 0",
-    fontSize: "3rem",
-    lineHeight: "3rem",
+    fontSize: "4rem",
+    lineHeight: "4rem",
     fontWeight: "700",
     fontStyle: "bold",
     textAlign: "left" as "left",
@@ -129,12 +131,14 @@ export default function Card({
     // display: "inline",
     // minHeight: "100%",
 //    padding: "0rem 6rem 0rem 6rem",
+    padding: "0rem 0rem",
   /* position: relative; */
     objectFit: "cover" as "cover",
     // overflow: "hidden",
     /* max-height: 40rem; */
     objectPosition: "50% 50%",
-    width: "100%",
+//    width: "100%",
+    width: "50%",
     /* min-width: 100%; */
   };
   const imgStyle = {

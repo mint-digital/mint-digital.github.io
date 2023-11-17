@@ -12,7 +12,7 @@ export default function Team({
     backgroundColor: team.backgroundColor,
     padding: "6rem 0",
 //    margin: "6rem 0",
-    width: "100%",
+//    width: "100%",
    // margin: 0,
   };
   const teamContainerStyle = {
@@ -21,10 +21,12 @@ export default function Team({
     fleWrap: "wrap",
     flexFlow: "row wrap",
 //    maxWidth: "100svw",
-    maxWidth: "40svw",
+//    maxWidth: "40svw",
+//    maxWidth: "60svw",
+    maxWidth: "1600px",
     // padding: "0rem 0rem",
-    margin: "0rem 6rem",
-    //padding: "0rem 6rem",
+    // margin: "0rem 6rem",
+    padding: "0rem 2rem",
     alignSelf: "center",
     justifyContent: "center" as "center",
     gap: "4rem",
@@ -47,9 +49,15 @@ export default function Team({
     margin: "0 0 2rem 0",
   };
   const entryContainerStyle = {
+    display: "grid",
     color: team.textColor,
     textAlign: "center" as "center",
   };
+  const nameCellStyle = {
+    margin: "0rem",
+    padding: "0rem",
+    height: "3.5rem",
+  }; 
   const nameStyle = {
     fontSize: "1.25rem",
     fontWeight: "700",
@@ -88,8 +96,10 @@ export default function Team({
         {team.members.items.map(function (entry, i) {
           return <div key={i} style={entryContainerStyle}>
             <a href={entry.fields.linkedInUrl} target='_blank'><img src={entry.fields.profileImage.fields.file.url} style={teamImgStyle}></img></a>
-            <div style={nameStyle}>{entry.fields.name}</div>
-            <div style={nameStyle}>{entry.fields.surname}</div>
+            <div style={nameCellStyle}>
+              <div style={nameStyle}>{entry.fields.name}</div>
+              <div style={nameStyle}>{entry.fields.surname}</div>
+            </div>
             {/* <div style={titleStyle}>{entry.fields.title}</div> */}
             <div style={iconStyle}>
               <a href={entry.fields.email} target='_blank'><img src='../img/email-svgrepo-com_color.svg' style={linkedInStyle}></img></a>

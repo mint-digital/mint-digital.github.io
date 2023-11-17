@@ -161,7 +161,7 @@ export default function Quote({
     //margin: 0,
     display: "grid",
 //    gridTemplateColumns: "minmax(4rem, auto) fit-content(1600px) minmax(4rem, auto)",
-    gridTemplateColumns: "auto fit-content(1400px) auto",
+    gridTemplateColumns: "auto fit-content(1600px) auto",
   };
   const quoteContainerStyle = {
     display: "flex",
@@ -175,14 +175,14 @@ export default function Quote({
     flexDirection: "column" as "column",
     //width: "auto",
     //width: "56rem",
-    padding: "4rem",
+    padding: "4rem 4rem",
   };
   const quoteTitleStyleCentered = {
     display: "block",
     color: textColor.value,
 //    textAlign: "left" as "left",
     textAlign: "center" as "center",
-    fontSize: "3rem",
+    fontSize: "4rem",
     fontStyle: "bold",
     fontWeight: "900",
 //    lineHeight: "4rem",
@@ -196,10 +196,10 @@ export default function Quote({
     color: textColor.value,
     textAlign: "left" as "left",
 //    textAlign: "center" as "center",
-    fontSize: "3rem",
+    fontSize: "4rem",
     fontStyle: "bold",
     fontWeight: "700",
-    lineHeight: "3rem",
+    lineHeight: "4rem",
     margin: "0",
     padding: "0rem",
     //maxWidth: "22ch",
