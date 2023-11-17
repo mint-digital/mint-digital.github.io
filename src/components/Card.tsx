@@ -99,9 +99,11 @@ export default function Card({
     display: "inline-block",
     position: "relative" as "relative",
     //padding: "6rem 6rem",
+    padding: "4rem 4rem",
     //margin: "6rem 6rem",
     //padding: "5rem 7rem 5rem 7rem",
     //flexGrow: "1",
+    width: "50%",
   };
   const titleStyle = {
     color: textColor.value,
@@ -119,9 +121,9 @@ export default function Card({
     color: textColor.value,
     //padding: "0 0rem 2rem 0",
     //margin: "0 0rem 2rem 0",
-    fontSize: "2rem",
+    fontSize: "1.75rem",
     fontWeight: "400",
-    lineHeight: "2.75rem",
+    lineHeight: "2.5rem",
     //maxWidth: "34ch",
     textWrap: "balance",
   };
@@ -129,12 +131,14 @@ export default function Card({
     // display: "inline",
     // minHeight: "100%",
 //    padding: "0rem 6rem 0rem 6rem",
+    padding: "0rem 0rem",
   /* position: relative; */
     objectFit: "cover" as "cover",
     // overflow: "hidden",
     /* max-height: 40rem; */
     objectPosition: "50% 50%",
-    width: "100%",
+//    width: "100%",
+    width: "50%",
     /* min-width: 100%; */
   };
   const imgStyle = {

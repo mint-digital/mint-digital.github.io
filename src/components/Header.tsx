@@ -74,7 +74,7 @@ export default function Header({
     objectFit: "cover" as "cover",
     objectPosition: "center center",
 
-    transform: "rotateY(180deg)",
+//    transform: "rotateY(180deg)",
 
 //    height: "32rem",
     height: "100svh",
@@ -142,9 +142,9 @@ export default function Header({
 //    margin: "0 auto 3rem",
     margin: "0",
 //    fontSize: "5rem",
-    fontSize: "7rem",
+    fontSize: "5.5rem",
 //    lineHeight: "8rem",
-    lineHeight: "8rem",
+    lineHeight: "6rem",
 //    lineHeight: "5rem",
     fontWeight: "700",
     fontStyle: "bold",
@@ -161,7 +161,7 @@ export default function Header({
 //    padding: "2rem 0 2rem 0",
 //    fontSize: "1.25rem",
 //    fontSize: "2rem",
-    fontSize: "1.75rem",
+    fontSize: "1.5rem",
     fontWeight: "400",
 //    width: "ch",
     textTransform: "uppercase" as "uppercase",
@@ -181,33 +181,34 @@ export default function Header({
   var videoFile = null;
   switch(videoNumber) {
 //  switch(headProps.videoNumber) {
-    case '1':       
+    case 1:       
       videoFile = "../img/700_ST.mp4";   
     break;
-    case '2':       
+    case 2:       
       videoFile = "../img/test_redux.mp4";   
     break;
-    case '3':       
+    case 3:       
       videoFile = "../img/test_redux2.mp4";   
     break;
-    case '4':       
+    case 4:       
       videoFile = "../img/pexels-carsten-link-14057038 (1080p).mp4";   
     break;
-    case '5':       
+    case 5:       
       videoFile = "../img/forest_redux.mp4";   
     break;
-    case '6':       
+    case 6:       
       videoFile = "../img/vid_1.mp4";   
     break;
-    case '7':       
+    case 7:       
       videoFile = "../img/vid_2.mp4";   
     break;
     default:
       console.log('default case: ' + videoNumber);
-      videoFile = "../img/vid_2.mp4";
+      videoFile = "../img/vid_2_flipped.mp4";
   };
 
   console.log('videoFile: ' + videoFile);
+  console.log('videoNumber: ' + videoNumber);
 	return (
     <div style={rowStyle}>
       <video id="background-video" style={videoStyle} autoPlay loop muted>

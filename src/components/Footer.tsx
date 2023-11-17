@@ -28,7 +28,7 @@ export default function Footer({
     width: "10rem",
     height: "10rem",
 //    padding: "0",
-    padding: "6rem 0 2rem 0",
+    padding: "4rem 0 1rem 0",
 //    margin: "6rem 0 2rem 0",
   };
   const txtCellStyle = {
@@ -38,7 +38,7 @@ export default function Footer({
   };
   const titleStyle = {
     color: footProps.textColor.value,
-    padding: "0 2rem 0 2rem",
+    padding: "0 2rem 0 1rem",
     //margin: "0 2rem 0 2rem",
 //    margin: "0",
     fontSize: "2rem",
@@ -51,13 +51,13 @@ export default function Footer({
 //    width: "100%",
   };
   const linkedInStyle = {
-    width: "6rem",
-    padding: "2rem 0 0 0",
+    width: "3rem",
+    padding: "1rem 0 0 0",
     //margin: "2rem 0 0 0",
   };
   const subheaderStyle = {
     color: footProps.textColor.value,
-    padding: "1rem 2rem 0 2rem",
+    padding: "0rem 2rem 0 2rem",
 //    margin: "1rem 2rem 0 2rem",
 //    margin: "0",
     fontSize: "1.25rem",

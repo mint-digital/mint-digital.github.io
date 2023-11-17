@@ -175,7 +175,7 @@ export default function Quote({
     flexDirection: "column" as "column",
     //width: "auto",
     //width: "56rem",
-    padding: "4rem",
+    padding: "4rem 4rem",
   };
   const quoteTitleStyleCentered = {
     display: "block",
@@ -210,7 +210,7 @@ export default function Quote({
     color: textColor.value,
 //    textAlign: "left" as "left",
     textAlign: "center" as "center",
-    fontSize: "2rem",
+    fontSize: "1.75rem",
     //fontStyle: "italic",
     fontWeight: "400",
     margin: "0",
@@ -220,8 +220,8 @@ export default function Quote({
   const paragraphStyle = {
     color: textColor.value,
     textAlign: "left" as "left",
-    fontSize: "2rem",
-    lineHeight: "2.75rem",
+    fontSize: "1.75rem",
+    lineHeight: "2.5rem",
     //fontStyle: "italic",
     fontWeight: "400",
     margin: "0",
