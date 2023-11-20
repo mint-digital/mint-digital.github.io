@@ -161,7 +161,7 @@ export default function Quote({
     //margin: 0,
     display: "grid",
 //    gridTemplateColumns: "minmax(4rem, auto) fit-content(1600px) minmax(4rem, auto)",
-    gridTemplateColumns: "auto fit-content(1600px) auto",
+    gridTemplateColumns: "auto fit-content(1400px) auto",
   };
   const quoteContainerStyle = {
     display: "flex",

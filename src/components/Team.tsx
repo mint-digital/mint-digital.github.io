@@ -23,7 +23,8 @@ export default function Team({
 //    maxWidth: "100svw",
 //    maxWidth: "40svw",
 //    maxWidth: "60svw",
-    maxWidth: "1600px",
+//    maxWidth: "1600px",
+    maxWidth: "1200px",
     // padding: "0rem 0rem",
     // margin: "0rem 6rem",
     padding: "0rem 2rem",
@@ -77,21 +78,21 @@ export default function Team({
     padding: "0 0rem 0rem 0rem",
     fontStyle: "italic",
   };
-  const iconStyle = {
+  const iconContainerStyle = {
     display: "flex",
     flexDirection: "row" as "row",
     justifyContent: "center",
 //    padding: "1rem",
     margin: "1rem",
-    gap: "1rem",
+    gap: "1.25rem",
   };
-  const linkedInStyle = {
-    width: "3rem",
+  const iconStyle = {
+    width: "1.75rem",
   };
 
   return (
     <section className='TeamContainer' style={entryStyle}>
-      <h2 style={headerStyleCentered}>Vi är mint</h2>
+      <h2 style={headerStyleCentered}>Vi är Mint</h2>
       <div style={teamContainerStyle}>
         {team.members.items.map(function (entry, i) {
           return <div key={i} style={entryContainerStyle}>
@@ -101,9 +102,9 @@ export default function Team({
               <div style={nameStyle}>{entry.fields.surname}</div>
             </div>
             {/* <div style={titleStyle}>{entry.fields.title}</div> */}
-            <div style={iconStyle}>
-              <a href={entry.fields.email} target='_blank'><img src='../img/email-svgrepo-com_color.svg' style={linkedInStyle}></img></a>
-              <a href={entry.fields.linkedInUrl} target='_blank'><img src='../img/iconmonstr-linkedin-3_color.svg' style={linkedInStyle}></img></a>
+            <div style={iconContainerStyle}>
+              <a href={entry.fields.email} target='_blank'><img src='../img/email-svgrepo-com_color.svg' style={iconStyle}></img></a>
+              <a href={entry.fields.linkedInUrl} target='_blank'><img src='../img/iconmonstr-linkedin-3_color.svg' style={iconStyle}></img></a>
             </div>
           </div>
         })}
