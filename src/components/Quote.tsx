@@ -3,12 +3,14 @@ import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import './Quote.css';
 
 export default function Quote({
+  isMobile,
   title,
   text,
   backgroundColor,
   textColor,
   isQuote,
 }: {
+  isMobile: boolean,
   title: string,
   text,
   image_url: string,
@@ -16,6 +18,7 @@ export default function Quote({
   textColor,
   isQuote: boolean,
 }) {
+  console.log(isMobile);
   //console.log("title; " + title);
   //console.log("abstract: " + abstract);
   //console.log("backgroundColor: " + backgroundColor.value);

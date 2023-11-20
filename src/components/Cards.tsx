@@ -1,14 +1,17 @@
 import Card from './Card';
 import Quote from './Quote';
+import { useMediaQuery } from 'react-responsive'
 
 export default function Cards({
-  cards
+  cards,
 }: {
-  cards
+  cards,
 }) {
+  const isMobile = useMediaQuery({ maxWidth: 500})
   let cs = cards.items.map((c, idx) => {
   //  console.log(c);
     const cardProps = { 
+      isMobile,
       image_url: c.fields.titleImage != null ? "https:" + c.fields.titleImage.fields.file.url : null,
       ...c.fields
     };

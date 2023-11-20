@@ -25,7 +25,10 @@ import { fetchCards, fetchTeam, fetchHeader, fetchFooter } from "../utils/conten
 //const video = Astro.url.searchParams.get('video')! || '0';
 //const bright = Astro.url.searchParams.get('bright')! || '60';
 
-const cards = { cards: await fetchCards() };
+const cards = { 
+	cards: await fetchCards() 
+};
+
 const team = { team: {
 		textColor: "#efe9e0",
 		backgroundColor: "#86ad9e",
@@ -77,6 +80,7 @@ const team = { team: {
 //		]
 //	}
 //};
+
 const headProps = {
 	videoNumber: 0,
 	bright: 90,
