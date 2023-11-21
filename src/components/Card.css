@@ -2,6 +2,11 @@
   /* padding: 2rem;  */
 /* } */
 
+code {
+  font-family: 'Lato';
+  color: #9f5743;
+}
+
 .cardTextCell { 
   /* padding: 5rem 7rem 5rem 7rem; */
   /* padding: 6rem 6rem 6rem 6rem; */

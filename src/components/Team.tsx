@@ -24,18 +24,18 @@ export default function Team({
 //    maxWidth: "40svw",
 //    maxWidth: "60svw",
 //    maxWidth: "1600px",
-    maxWidth: "1200px",
+    maxWidth: "1400px",
     // padding: "0rem 0rem",
     // margin: "0rem 6rem",
     padding: "0rem 2rem",
     alignSelf: "center",
     justifyContent: "center" as "center",
-    gap: "4rem",
+    gap: "6rem",
   };
   const teamImgStyle = {
     // padding: "2rem 2rem 1rem 2rem",
     margin: "2rem 2rem 1rem 2rem",
-    width: "12rem",
+    width: "14rem",
   };
   const headerStyleCentered = {
     display: "block",
@@ -43,7 +43,7 @@ export default function Team({
     textAlign: "center" as "center",
     fontSize: "4.5rem",
     fontStyle: "bold",
-    fontWeight: "900",
+    fontWeight: "700",
     lineHeight: "4rem",
     //margin: "0",
 //    padding: "0 0 2rem 0",
