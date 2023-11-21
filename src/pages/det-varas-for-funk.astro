@@ -1,0 +1,84 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<base href="." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/Common.css" />
+		<style>
+			html,
+			body {
+				font-family: "Lato";
+				margin: 0;
+				padding: 0;
+				height: 100svh;
+				font-size: 16px;
+				background-attachment: fixed;
+				background-color: white;
+				scroll-behavior: smooth;
+			}
+			@media (prefers-color-scheme: dark) {
+				html,
+				body {
+					font-family: "Lato";
+					margin: 0;
+					padding: 0;
+					height: 100svh;
+					font-size: 16px;
+					background-attachment: fixed;
+					background-color: black;
+					scroll-behavior: smooth;
+				}
+			}
+
+			@media screen and (max-width: 900px),
+			screen and (max-height: 550px) {
+				html,
+				body {
+					font-size: 10px;
+				}
+			}
+
+			@media screen and (max-width: 600px),
+			screen and (max-height: 350px) {
+				html,
+				body {
+					font-size: 7px;
+				}
+			}
+		</style>
+		<!-- Matomo -->
+		<script>
+			var _paq = window._paq = window._paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="https://mint.matomo.cloud/";
+				_paq.push(['setTrackerUrl', u+'matomo.php']);
+				_paq.push(['setSiteId', '1']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.async=true; g.src='//cdn.matomo.cloud/mint.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<!-- End Matomo Code -->
+	</head>
+	<script></script>
+	<body>
+		<!-- <main style="display: flex; flex-direction: column; align-items: center"> -->
+		<!-- <main style="display: grid; grid-template-columns: auto 1800px auto;"> -->
+		<main>
+      <h1>Det våras för funktioner</h1>
+		</main>
+	</body>
+</html>
