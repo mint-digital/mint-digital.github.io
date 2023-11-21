@@ -30,7 +30,7 @@ export default function Team({
     padding: "0rem 2rem",
     alignSelf: "center",
     justifyContent: "center" as "center",
-    gap: "6rem",
+//    gap: "6rem",
   };
   const teamImgStyle = {
     // padding: "2rem 2rem 1rem 2rem",
@@ -53,6 +53,7 @@ export default function Team({
     display: "grid",
     color: team.textColor,
     textAlign: "center" as "center",
+    padding: "0rem 2rem 2rem 2rem",
   };
   const nameCellStyle = {
     margin: "0rem",
