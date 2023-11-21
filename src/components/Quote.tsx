@@ -232,7 +232,6 @@ export default function Quote({
     //maxWidth: "58rem",
   };
 
-
 	return (
     <section className='Quote' style={entryStyle}>
       <div className='leftPad'></div>
