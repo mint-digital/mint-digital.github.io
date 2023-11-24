@@ -35,7 +35,7 @@ export default function Team({
   const teamImgStyle = {
     // padding: "2rem 2rem 1rem 2rem",
     margin: "2rem 2rem 1rem 2rem",
-    width: "14rem",
+    width: "18rem",
   };
   const headerStyleCentered = {
     display: "block",
@@ -61,7 +61,7 @@ export default function Team({
     height: "3.5rem",
   }; 
   const nameStyle = {
-    fontSize: "1.25rem",
+    fontSize: "1.75rem",
     fontWeight: "700",
     lineHeight: "2rem",
     textTransform: "uppercase" as "uppercase",
