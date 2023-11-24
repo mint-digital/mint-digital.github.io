@@ -49,7 +49,7 @@ export default function Header({
 //    flexDirection: "column" as "column",
     backgroundColor: headProps.backgroundColor.value,
     //backgroundImage: "url(" + headProps.backgroundImage.fields.file.url + ")",
-    backgroundImage: "url(../img/drone_flight_reverse.png)",
+    backgroundImage: "url(../img/drone_flight_reverse_xfade.png)",
     backgroundSize: "cover",
     backgroundPosition: "center bottom",
 //    padding: "0 0 0rem 0",
@@ -206,7 +206,7 @@ export default function Header({
     break;
     default:
       console.log('default case: ' + videoNumber);
-      videoFile = "../img/vid_2_flipped.mp4";
+      videoFile = "../img/vid_2_flipped_xfade.mp4";
   };
 
   console.log('videoFile: ' + videoFile);
@@ -214,7 +214,6 @@ export default function Header({
 	return (
     <div style={rowStyle}>
       <video id="background-video" style={videoStyle} autoPlay loop muted playsInline >
-        {/* <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4" /> */}
         <source src={videoFile} type="video/mp4" />
       </video>
       {/* <img style={imgStyle} src="../img/mint_logo_v1_light.png" /> */}
