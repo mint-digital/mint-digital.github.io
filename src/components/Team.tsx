@@ -24,17 +24,18 @@ export default function Team({
 //    maxWidth: "40svw",
 //    maxWidth: "60svw",
 //    maxWidth: "1600px",
-    maxWidth: "1400px",
+    maxWidth: "76rem",
     // padding: "0rem 0rem",
     // margin: "0rem 6rem",
-    padding: "0rem 2rem",
+    padding: "2rem 1rem 0 1rem",
     alignSelf: "center",
-    justifyContent: "center" as "center",
-//    gap: "6rem",
+//    justifyContent: "center" as "center",
+    justifyContent: "space-around" as "space-around",
+    gap: "2rem",
   };
   const teamImgStyle = {
     // padding: "2rem 2rem 1rem 2rem",
-    margin: "2rem 2rem 1rem 2rem",
+    // margin: "2rem 1rem 1rem 1rem",
     width: "18rem",
   };
   const headerStyleCentered = {
@@ -53,7 +54,7 @@ export default function Team({
     display: "grid",
     color: team.textColor,
     textAlign: "center" as "center",
-    padding: "0rem 2rem 2rem 2rem",
+    // padding: "0rem 1rem 2rem 1rem",
   };
   const nameCellStyle = {
     margin: "0rem",
@@ -61,7 +62,7 @@ export default function Team({
     height: "3.5rem",
   }; 
   const nameStyle = {
-    fontSize: "1.75rem",
+    fontSize: "1.3rem",
     fontWeight: "700",
     lineHeight: "2rem",
     textTransform: "uppercase" as "uppercase",

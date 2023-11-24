@@ -204,7 +204,7 @@ export default function Card({
     padding: "4rem",
   }
 
-  isMobile = false;
+ // isMobile = false;
 
   if(isMobile){
     return renderMobile(  
@@ -271,18 +271,20 @@ function renderMobile(
     imgCellStyle.backgroundSize = "cover" as "cover";
     imgCellStyle.backgroundPosition = "center center";
     imgCellStyle.textAlign = "bottom";
-    imgCellStyle.position = "relative";
+//    imgCellStyle.position = "relative";
 
-    titleStyle.display = "inline-block";
-    titleStyle.margin = "4rem 4rem 0rem 4rem";
+//    titleStyle.display = "inline-block";
+    titleStyle.display = "block";
+//    titleStyle.margin = "4rem 4rem 0rem 4rem";
     titleStyle.width = "content";
 //    titleStyle.padding = "0.15rem";
+    titleStyle.padding = "2rem 0rem 2rem 0rem";
 //    titleStyle.backgroundColor = "white";
 //    titleStyle.filter = "drop-shadow(0 0 2.25rem blacks)";
-    titleStyle.textShadow = "1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000";
-    titleStyle.color = textColor.value;
-    titleStyle.position = "absolute";
-    titleStyle.bottom = "2rem";
+//    titleStyle.textShadow = "1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000";
+//    titleStyle.color = textColor.value;
+//    titleStyle.position = "absolute";
+//    titleStyle.bottom = "2rem";
 
     txtCellStyle.width = "auto";
     txtCellStyle.padding = "0rem 0rem 4rem 0rem";
@@ -293,10 +295,10 @@ function renderMobile(
         <div className='leftPad'></div>
         <span className="rowStyle" style={rowStyle}>
           <div className="imgCellStyle" style={imgCellStyle}>
-            {/* <img style={imgStyle} src={image_url}></img> */}
-            <h1 style={titleStyle}>{title}</h1>
+            <img style={imgStyle} src={image_url}></img>
           </div>
           <span className='cardTextCell' style={txtCellStyle}>
+            <h1 style={titleStyle}>{title}</h1>
             <div>
               <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
             </div>
