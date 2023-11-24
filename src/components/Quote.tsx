@@ -171,14 +171,14 @@ export default function Quote({
     flexDirection: "column" as "column",
     //width: "auto",
     alignSelf: "center" as "center",
-    padding: "4rem",
+    padding: "4rem 0rem 0rem 0rem",
   };
   const textContainerStyle = {
     display: "flex",
     flexDirection: "column" as "column",
     //width: "auto",
     //width: "56rem",
-    padding: "4rem 4rem",
+    padding: "4rem 4rem 4rem 4rem",
   };
   const quoteTitleStyleCentered = {
     display: "block",
@@ -217,8 +217,18 @@ export default function Quote({
     //fontStyle: "italic",
     fontWeight: "400",
     margin: "0",
-    padding: "0 0rem 0rem 0rem",
+    padding: "0 0rem 4rem 0rem",
     maxWidth: "58rem",
+    alignSelf: "center" as "center",
+  };
+  const groupImgStyle = {
+    width: "100%",
+    padding: "0",
+    margin: "0",
+  };
+  const imgPadStyle = {
+    // backgroundColor: "#efe9e0",
+    backgroundColor: "#cedcd5",
   };
   const paragraphStyle = {
     color: textColor.value,
@@ -234,13 +244,16 @@ export default function Quote({
 
 	return (
     <section className='Quote' style={entryStyle}>
-      <div className='leftPad'></div>
+      <div className='leftPad_1'></div>
       <div style={isQuote ? quoteContainerStyle : textContainerStyle}>
         <h1 style={isQuote ? quoteTitleStyleCentered : titleStyleCentered}>{title}</h1>
-        { text && isQuote && <span style={quoteStyle}>{documentToReactComponents(text, quoteOptions)}</span>}
+        { text && isQuote &&  <div style={quoteStyle}>{documentToReactComponents(text, quoteOptions)}</div>}
         { text && !isQuote && <div style={paragraphStyle}>{documentToReactComponents(text, options)}</div>}
       </div>
-      <div className='rightPad'></div>
+      <div className='rightPad_1'></div>
+      <div className='leftPad_2' style={imgPadStyle}></div>
+        {isQuote &&  <img src='../img/signal-2023-11-23-205548_002_cropped.jpeg' style={groupImgStyle}></img> }
+      <div className='rightPad_2' style={imgPadStyle}></div>
     </section>
 	);
 }

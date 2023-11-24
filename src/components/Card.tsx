@@ -40,7 +40,7 @@ export default function Card({
             //fontSize: '15px',
             //lineHeight: '30px',
             //marginBottom: '0.75rem',
-            marginTop: "1.75rem",
+            marginBottom: "1.75rem",
           }}
         >
           {children}
@@ -102,7 +102,7 @@ export default function Card({
     display: "inline-block",
     position: "relative" as "relative",
     //padding: "6rem 6rem",
-    padding: "4rem 4rem",
+//    padding: "4rem 4rem",
     //margin: "6rem 6rem",
     //padding: "5rem 7rem 5rem 7rem",
     //flexGrow: "1",
@@ -110,7 +110,9 @@ export default function Card({
   };
   const titleStyle = {
     color: textColor.value,
-    padding: "0 0rem 0",
+//    padding: "0 0rem 0",
+    padding: "4rem 4rem 0rem 4rem",
+    // padding: "2rem",
     margin: "0rem 0",
     fontSize: "4rem",
     lineHeight: "4rem",
@@ -142,6 +144,7 @@ export default function Card({
     objectPosition: "50% 50%",
     //    width: "100%",
     width: "50%",
+    // width: "50%",
     /* min-width: 100%; */
   };
   const imgStyle = {
@@ -197,6 +200,9 @@ export default function Card({
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0.2rem",
   };
+  const abstractContainerStyle = {
+    padding: "4rem",
+  }
 
   isMobile = false;
 
@@ -213,7 +219,8 @@ export default function Card({
       imgCellStyle,
       imgStyle,
       image_url,
-      backgroundColor);
+      backgroundColor,
+      abstractContainerStyle);
   } else {
     return renderDesktop(
       alignImageRight,
@@ -230,6 +237,7 @@ export default function Card({
       image_url,
       ctaUrl,
       ctaText,
+      abstractContainerStyle,
     );
   }
 }
@@ -246,7 +254,8 @@ function renderMobile(
   imgCellStyle,
   imgStyle,
   image_url,
-  textColor) {
+  textColor,
+  abstractContainerStyle) {
     console.log("Rendering mobile");
     const rowStyle = {
       display: "flex",
@@ -312,17 +321,22 @@ function renderDesktop(
   imgStyle,
   image_url,
   ctaUrl,
-  ctaText) {
+  ctaText,
+  abstractContainerStyle) {
     console.log("Rendering desktop");
     if (alignImageRight) {
+      const padStyle = {
+        backgroundColor: "#efe9e0",
+        // backgroundColor: "#cedcd5",
+      }
       return (
         <div style={outerStyle}>
           <section style={entryStyle}>
-            <div className='leftPad'></div>
-            <div className="rowStyle">
+            <div className='leftPad' style={padStyle}></div>
+            <div className="rowStyle" style={padStyle}>
               <span className='cardTextCell' style={txtCellStyle}>
                 <h1 style={titleStyle}>{title}</h1>
-                <div>
+                <div style={abstractContainerStyle}>
                   <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
                 </div>
               </span>
@@ -330,7 +344,7 @@ function renderDesktop(
                 <img style={imgStyle} src={image_url}></img>
               </span>
             </div>
-            <div className='rightPad'></div>
+            <div className='rightPad' style={padStyle}></div>
           </section>
         </div>
       );
@@ -347,7 +361,7 @@ function renderDesktop(
               <span className='cardTextCell' style={txtCellStyle}>
                 <a className='cta-ball' href={ctaUrl}>{ctaText}</a>
                 <h1 style={titleStyle}>{title}</h1>
-                <div>
+                <div style={abstractContainerStyle}>
                   <span style={abstractStyle}>{documentToReactComponents(text, options)}</span>
                 </div>
                 {/* {ctaText && <a style={ctaStyle} href={ctaUrl}>{ctaText}</a>} */}
