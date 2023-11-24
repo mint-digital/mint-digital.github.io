@@ -213,7 +213,7 @@ export default function Header({
   console.log('videoNumber: ' + videoNumber);
 	return (
     <div style={rowStyle}>
-      <video id="background-video" style={videoStyle} autoPlay loop muted>
+      <video id="background-video" style={videoStyle} autoPlay loop muted playsInline >
         {/* <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4" /> */}
         <source src={videoFile} type="video/mp4" />
       </video>
