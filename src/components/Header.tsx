@@ -221,7 +221,7 @@ export default function Header({
       <div style={txtCellStyle}>
         <h1 className='header-title' style={titleStyle}>{headProps.headline}</h1>
         <div style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline)}</div>
-        <img src='../img/down-arrow-svgrepo-com_white.svg' style={arrowStyle}></img>
+        <a href="#whoweare"><img src='../img/down-arrow-svgrepo-com_white.svg' style={arrowStyle}></img></a>
       </div>
     </div>
 	);

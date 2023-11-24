@@ -225,6 +225,7 @@ export default function Quote({
     width: "100%",
     padding: "0",
     margin: "0",
+    gridColumn: "span 3",
   };
   const imgPadStyle = {
     // backgroundColor: "#efe9e0",
@@ -245,15 +246,16 @@ export default function Quote({
 	return (
     <section className='Quote' style={entryStyle}>
       <div className='leftPad_1'></div>
-      <div style={isQuote ? quoteContainerStyle : textContainerStyle}>
+      <div id='whoweare' style={isQuote ? quoteContainerStyle : textContainerStyle}>
         <h1 style={isQuote ? quoteTitleStyleCentered : titleStyleCentered}>{title}</h1>
         { text && isQuote &&  <div style={quoteStyle}>{documentToReactComponents(text, quoteOptions)}</div>}
         { text && !isQuote && <div style={paragraphStyle}>{documentToReactComponents(text, options)}</div>}
       </div>
       <div className='rightPad_1'></div>
-      <div className='leftPad_2' style={imgPadStyle}></div>
-        {isQuote &&  <img src='../img/signal-2023-11-23-205548_002_cropped.jpeg' style={groupImgStyle}></img> }
-      <div className='rightPad_2' style={imgPadStyle}></div>
+      {/* <div className='leftPad_2' style={imgPadStyle}></div> */}
+        {isQuote &&  <img src='../img/signal-2023-11-23-205548_002_cropped_short.jpeg' style={groupImgStyle}></img> }
+        {/* {isQuote &&  <img src='../img/signal-2023-11-23-205548_002_cropped.jpeg' style={groupImgStyle}></img> } */}
+      {/* <div className='rightPad_2' style={imgPadStyle}></div> */}
     </section>
 	);
 }
