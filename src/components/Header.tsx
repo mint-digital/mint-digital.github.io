@@ -128,8 +128,8 @@ export default function Header({
 
     textAlign: "center" as "center",
 //    alignItems: "center" as "center",
-//    justifyContent: "flex-end" as "flex-end",
-    justifyContent: "center" as "center",
+    justifyContent: "flex-end" as "flex-end",
+    // justifyContent: "center" as "center",
     //padding: "0 2rem",
     zIndex: "100",
   };
@@ -157,7 +157,8 @@ export default function Header({
 //    bottom: "0",
     color: headProps.textColor.value,
 //    margin: "0rem auto 0",
-    margin: "2rem 0 2rem 0",
+//    margin: "2rem 0 2rem 0",
+    margin: "2rem 0 15vh 0",
 //    padding: "2rem 0 2rem 0",
 //    fontSize: "1.25rem",
 //    fontSize: "2rem",
