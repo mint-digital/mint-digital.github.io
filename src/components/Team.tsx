@@ -105,7 +105,7 @@ export default function Team({
             </div>
             {/* <div style={titleStyle}>{entry.fields.title}</div> */}
             <div style={iconContainerStyle}>
-              <a href={entry.fields.email} target='_blank'><img src='../img/email-svgrepo-com_color.svg' style={iconStyle}></img></a>
+              <a href={"mailto:" + entry.fields.email} target='_blank'><img src='../img/email-svgrepo-com_color.svg' style={iconStyle}></img></a>
               <a href={entry.fields.linkedInUrl} target='_blank'><img src='../img/iconmonstr-linkedin-3_color.svg' style={iconStyle}></img></a>
             </div>
           </div>
