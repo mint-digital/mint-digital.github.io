@@ -85,8 +85,8 @@ export default function Footer({
           <h1 style={titleStyle}>{footProps.title}</h1>
           <div>
             <p style={subheaderStyle}>Kontakta oss idag:&nbsp;
-            <a style={contactStyle} href="mailto:hej@mint.se">hej@mint.se</a></p>
-            <a href="https://www.linkedin.com/company/mintse/"><img style={linkedInStyle} src="../img/iconmonstr-linkedin-3_color.svg"></img></a>
+            <a style={contactStyle} href="mailto:hej@mint.se" target="_blank">hej@mint.se</a></p>
+            <a href="https://www.linkedin.com/company/mintse/" target="_blank"><img style={linkedInStyle} src="../img/iconmonstr-linkedin-3_color.svg"></img></a><a href="https://www.instagram.com/lifeatmint.se/" target="_blank"><img style={linkedInStyle} src="../img/public/img/instagram_mono.webp"></img></a>
             <p style={subheaderStyle}>© Mint, 2023</p>
           </div>
         </span>
