@@ -253,7 +253,7 @@ export default function Quote({
       </div>
       <div className='rightPad_1'></div>
       {/* <div className='leftPad_2' style={imgPadStyle}></div> */}
-        {isQuote &&  <img src='../img/signal-2023-11-23-205548_002_cropped_short.jpeg' style={groupImgStyle}></img> }
+        {isQuote &&  <img src='../img/lanner_20231116_0021_4000px_crop.jpg' style={groupImgStyle}></img> }
         {/* {isQuote &&  <img src='../img/signal-2023-11-23-205548_002_cropped.jpeg' style={groupImgStyle}></img> } */}
       {/* <div className='rightPad_2' style={imgPadStyle}></div> */}
     </section>
