@@ -55,7 +55,7 @@ export default function Header({
             //fontSize: '15px',
             //lineHeight: '30px',
             //marginBottom: '0.75rem',
-            margin: "0 1rem 0 1rem",
+            //margin: "0 1rem 0 1rem",
           }}
         >
           {children}
@@ -178,7 +178,7 @@ export default function Header({
     color: headProps.textColor.value,
 //    margin: "0rem auto 0",
 //    margin: "2rem 0 2rem 0",
-    margin: "2rem 0 15vh 0",
+    margin: "2rem 1rem 15vh 1rem",
 //    padding: "2rem 0 2rem 0",
 //    fontSize: "1.25rem",
 //    fontSize: "2rem",
