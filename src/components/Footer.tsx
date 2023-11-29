@@ -52,7 +52,7 @@ export default function Footer({
   };
   const linkedInStyle = {
     width: "3rem",
-    padding: "1rem 0 2rem 0",
+    padding: "1rem 0.75rem 2rem 0.75rem",
     //margin: "2rem 0 0 0",
   };
   const subheaderStyle = {
@@ -86,7 +86,7 @@ export default function Footer({
           <div>
             <p style={subheaderStyle}>Kontakta oss idag:&nbsp;
             <a style={contactStyle} href="mailto:hej@mint.se" target="_blank">hej@mint.se</a></p>
-            <a href="https://www.linkedin.com/company/mintse/" target="_blank"><img style={linkedInStyle} src="../img/iconmonstr-linkedin-3_color.svg"></img></a><a href="https://www.instagram.com/lifeatmint.se/" target="_blank"><img style={linkedInStyle} src="../img/public/img/instagram_mono.webp"></img></a>
+            <a href="https://www.linkedin.com/company/mintse/" target="_blank"><img style={linkedInStyle} src="../img/iconmonstr-linkedin-3_color.svg"></img></a><a href="https://www.instagram.com/lifeatmint.se/" target="_blank"><img style={linkedInStyle} src="../img/instagram_mono.webp"></img></a>
             <p style={subheaderStyle}>© Mint, 2023</p>
           </div>
         </span>
