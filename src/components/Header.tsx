@@ -1,5 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import styles from './Header.module.css'; 
+import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 
 export default function Header({
   videoNumber,
@@ -43,6 +44,25 @@ export default function Header({
   //console.log("bgColor: " + props.backgroundColor.value);
   //console.log("txtColor: " + props.textColor.value);
   //console.log("bgImg: " + props.backgroundImage.fields.file.url);
+
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (_node, children) => (
+        <p
+          style={{
+            //color: theme.colors.darkBlue,
+            //fontFamily: theme.fonts.Century_Gothic,
+            //fontSize: '15px',
+            //lineHeight: '30px',
+            //marginBottom: '0.75rem',
+            padding: "0 1rem 0 1rem",
+          }}
+        >
+          {children}
+        </p>
+      )
+    }
+  }
 
   const rowStyle = {
 //    display: "flex",
@@ -220,7 +240,7 @@ export default function Header({
       <img style={imgStyle} src="../img/mint_logo_postitiv_RGB.svg" />
       <div style={txtCellStyle}>
         <h1 className='header-title' style={titleStyle}>{headProps.headline}</h1>
-        <div style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline)}</div>
+        <div style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline, options)}</div>
         <a href="#whoweare"><img src='../img/down-arrow-svgrepo-com_white.svg' style={arrowStyle}></img></a>
       </div>
     </div>
