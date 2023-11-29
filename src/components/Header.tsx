@@ -55,7 +55,7 @@ export default function Header({
             //fontSize: '15px',
             //lineHeight: '30px',
             //marginBottom: '0.75rem',
-            padding: "0 1rem 0 1rem",
+            margin: "0 1rem 0 1rem",
           }}
         >
           {children}
