@@ -155,7 +155,7 @@ export default function Card({
     height: "100%",
     objectFit: "cover" as "cover",
     transformOrigin: "top center",
-    objectPosition: "center 25%",
+    objectPosition: "center 35%",
   };
   //  const imgStyle = {
   //    // display: "block",
