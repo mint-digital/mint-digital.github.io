@@ -12,6 +12,7 @@ export default function Card({
   alignImageRight,
   ctaText,
   ctaUrl,
+  anchor,
 }: {
   isMobile: boolean,
   title: string,
@@ -22,6 +23,7 @@ export default function Card({
   alignImageRight,
   ctaText,
   ctaUrl,
+  anchor,
 }) {
   console.log(isMobile);
   //console.log("title; " + title);
@@ -221,7 +223,8 @@ export default function Card({
       imgStyle,
       image_url,
       backgroundColor,
-      abstractContainerStyle);
+      abstractContainerStyle,
+      anchor);
   } else {
     return renderDesktop(
       alignImageRight,
@@ -239,7 +242,7 @@ export default function Card({
       ctaUrl,
       ctaText,
       abstractContainerStyle,
-    );
+      anchor);
   }
 }
 
@@ -256,7 +259,8 @@ function renderMobile(
   imgStyle,
   image_url,
   textColor,
-  abstractContainerStyle) {
+  abstractContainerStyle,
+  anchor) {
     console.log("Rendering mobile");
     const rowStyle = {
       display: "flex",
@@ -292,7 +296,7 @@ function renderMobile(
     txtCellStyle.margin = "0rem 4rem";
 
     return (<div style={outerStyle}>
-      <section style={entryStyle}>
+      <section id={anchor} style={entryStyle}>
         <div className='leftPad'></div>
         <span className="rowStyle" style={rowStyle}>
           <div className="imgCellStyle" style={imgCellStyle}>
@@ -325,7 +329,8 @@ function renderDesktop(
   image_url,
   ctaUrl,
   ctaText,
-  abstractContainerStyle) {
+  abstractContainerStyle,
+  anchor) {
     console.log("Rendering desktop");
     if (alignImageRight) {
       const padStyle = {
@@ -333,7 +338,7 @@ function renderDesktop(
         // backgroundColor: "#cedcd5",
       }
       return (
-        <div style={outerStyle}>
+        <div id={anchor} style={outerStyle}>
           <section style={entryStyle}>
             <div className='leftPad' style={padStyle}></div>
             <div className="rowStyle" style={padStyle}>
@@ -353,7 +358,7 @@ function renderDesktop(
       );
     } else {
       return (
-        <div style={outerStyle}>
+        <div id={anchor} style={outerStyle}>
           <section style={entryStyle}>
             <div className='leftPad'></div>
             <div className="rowStyle">

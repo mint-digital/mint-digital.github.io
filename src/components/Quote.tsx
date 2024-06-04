@@ -9,6 +9,7 @@ export default function Quote({
   backgroundColor,
   textColor,
   isQuote,
+  anchor,
 }: {
   isMobile: boolean,
   title: string,
@@ -17,6 +18,7 @@ export default function Quote({
   backgroundColor,
   textColor,
   isQuote: boolean,
+  anchor,
 }) {
   console.log(isMobile);
   //console.log("title; " + title);
@@ -244,7 +246,7 @@ export default function Quote({
   };
 
 	return (
-    <section className='Quote' style={entryStyle}>
+    <section id={anchor} className='Quote' style={entryStyle}>
       <div className='leftPad_1'></div>
       <div id='whoweare' style={isQuote ? quoteContainerStyle : textContainerStyle}>
         <h1 style={isQuote ? quoteTitleStyleCentered : titleStyleCentered}>{title}</h1>

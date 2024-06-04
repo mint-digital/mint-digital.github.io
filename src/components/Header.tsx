@@ -110,13 +110,19 @@ export default function Header({
 //    position: "relative",
   };
   const imgStyle = {
-    position: "absolute" as "absolute",
-    top: "0rem",
-
-    width: "6rem",
-    alignSelf: "start",
+    display: "inline" as "inline",
+    //display: "block" as "block",
+    //position: "block",
+    //position: "relative" as "relative",
+    //top: "0",
+    //maxHeight: "100%",
+    left: "0",
+    //width: "content",
+    width: "10rem",
+    //maxWidth: "6rem",
+    //alignSelf: "start",
 //    padding: "2rem 2rem 0 2rem",
-    margin: "2rem 2rem 0 2rem",
+    padding: "1rem",
     zIndex: "100",
     filter: "drop-shadow(0 0 .25rem lightslategray)",
   };
@@ -200,6 +206,41 @@ export default function Header({
     fill: "white",
   };
 
+  const navBarStyle = {
+    position: "fixed" as "fixed",
+    top: 0,
+    width: "100%",
+    zIndex: "1000",
+    background: "rgba(255,255,255,0.0)",
+    //background: "rgba(255,255,255,0.7)",
+  };
+
+  const navLineStyle = {
+    display: "flex" as "flex",
+    width: "100%",
+    maxHeight: "10rem",
+  }
+
+  const navTextStyle = {
+    display: "flex",
+    position: "absolute" as "absolute",
+    right: "0",
+    bottom: "0",
+    flexDirection: "row" as "row",
+    //display: "inline",
+    //flexDirection: "row-reverse" as "row-reverse",
+    fontSize: "2.5rem",
+    lineHeight: "6rem",
+    textAlign: "right" as "right",
+    paddingRight: "2rem",
+    paddingBottom: "1rem",
+    color: "#595959",
+  };
+
+  const navLinkStyle = {
+    padding: "0 1.5rem 0 1.5rem",
+  };
+
   var videoFile = null;
   switch(videoNumber) {
 //  switch(headProps.videoNumber) {
@@ -232,16 +273,30 @@ export default function Header({
   console.log('videoFile: ' + videoFile);
   console.log('videoNumber: ' + videoNumber);
 	return (
-    <div style={rowStyle}>
-      <video id="background-video" style={videoStyle} autoPlay loop muted playsInline >
-        <source src={videoFile} type="video/mp4" />
-      </video>
-      {/* <img style={imgStyle} src="../img/mint_logo_v1_light.png" /> */}
-      <img style={imgStyle} src="../img/mint_logo_postitiv_RGB.svg" />
-      <div style={txtCellStyle}>
-        <h1 className='header-title' style={titleStyle}>{headProps.headline}</h1>
-        <div style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline, options)}</div>
-        <a href="#whoweare"><img src='../img/down-arrow-svgrepo-com_white.svg' style={arrowStyle}></img></a>
+    <div id='toprow'>
+      <div style={navBarStyle}>
+        <div style={navLineStyle}>
+          <a href='#toprow'><img style={imgStyle} src="../img/mint_logo_postitiv_RGB.svg" /></a>
+          <div style={navTextStyle}>
+            <a href="#vision" style={navLinkStyle}>Vision</a>
+            <a href="#omoss" style={navLinkStyle}>Om Oss</a>
+            <a href="#roller" style={navLinkStyle}>Roller</a>
+            <a href="https://mint-1712829496.teamtailor.com/" style={navLinkStyle}>Mint & Friends</a>
+            <a href="#kompis" style={navLinkStyle}>Kontakt</a>
+          </div>
+        </div>
+      </div>
+      <div style={rowStyle}>
+        <video id="background-video" style={videoStyle} autoPlay loop muted playsInline >
+          <source src={videoFile} type="video/mp4" />
+        </video>
+        {/* <img style={imgStyle} src="../img/mint_logo_v1_light.png" /> */}
+        
+        <div style={txtCellStyle}>
+          <h1 className='header-title' style={titleStyle}>{headProps.headline}</h1>
+          <div style={subHeadlineStyle}>{documentToReactComponents(headProps.subHeadline, options)}</div>
+          <a href="#whoweare"><img src='../img/down-arrow-svgrepo-com_white.svg' style={arrowStyle}></img></a>
+        </div>
       </div>
     </div>
 	);
