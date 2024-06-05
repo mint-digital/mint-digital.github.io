@@ -281,7 +281,7 @@ export default function Header({
             <a href="#vision" style={navLinkStyle}>Vision</a>
             <a href="#omoss" style={navLinkStyle}>Om Oss</a>
             <a href="#roller" style={navLinkStyle}>Roller</a>
-            <a href="https://mint-1712829496.teamtailor.com/" style={navLinkStyle}>Mint & Friends</a>
+            <a href="https://mint-1712829496.teamtailor.com/" target="_blank" style={navLinkStyle}>Mint & Friends</a>
             <a href="#kompis" style={navLinkStyle}>Kontakt</a>
           </div>
         </div>
