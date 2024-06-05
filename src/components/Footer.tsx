@@ -76,8 +76,14 @@ export default function Footer({
 //    width: "100%",
   };
 
+  const anchorStyle = {
+    position: "relative" as "relative",
+    top: "-6rem",
+  };
+
 	return (
-    <section id="kompis" style={entryStyle}>
+    <section style={entryStyle}>
+      <div id="kompis" style={anchorStyle}></div>
       <div style={rowStyle}>
         {/* <img style={profileStyle} src="../img/mint_logo_v1_light.png"></img> */}
         <img style={profileStyle} src="../img/mint_logo_postitiv_RGB.svg"></img>

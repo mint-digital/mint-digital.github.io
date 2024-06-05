@@ -118,7 +118,7 @@ export default function Header({
     //maxHeight: "100%",
     left: "0",
     //width: "content",
-    width: "10rem",
+    width: "var(--navSize)",
     //maxWidth: "6rem",
     //alignSelf: "start",
 //    padding: "2rem 2rem 0 2rem",
@@ -211,15 +211,16 @@ export default function Header({
     top: 0,
     width: "100%",
     zIndex: "1000",
-    background: "rgba(255,255,255,0.0)",
+    background: "rgba(255,255,255, var(--opacity))",
+    willChange: "background",
     //background: "rgba(255,255,255,0.7)",
   };
 
   const navLineStyle = {
     display: "flex" as "flex",
     width: "100%",
-    maxHeight: "10rem",
-  }
+    maxHeight: "8rem",
+  };
 
   const navTextStyle = {
     display: "flex",
@@ -229,8 +230,8 @@ export default function Header({
     flexDirection: "row" as "row",
     //display: "inline",
     //flexDirection: "row-reverse" as "row-reverse",
-    fontSize: "2.5rem",
-    lineHeight: "6rem",
+    fontSize: "2.25rem",
+    //lineHeight: "6rem",
     textAlign: "right" as "right",
     paddingRight: "2rem",
     paddingBottom: "1rem",
@@ -274,7 +275,7 @@ export default function Header({
   console.log('videoNumber: ' + videoNumber);
 	return (
     <div id='toprow'>
-      <div style={navBarStyle}>
+      <div id='navbar' style={navBarStyle}>
         <div style={navLineStyle}>
           <a href='#toprow'><img style={imgStyle} src="../img/mint_logo_postitiv_RGB.svg" /></a>
           <div style={navTextStyle}>

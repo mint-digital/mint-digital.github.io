@@ -245,8 +245,14 @@ export default function Quote({
     //maxWidth: "58rem",
   };
 
+  const anchorStyle = {
+    position: "relative" as "relative",
+    top: "-6rem",
+  };
+
 	return (
-    <section id={anchor} className='Quote' style={entryStyle}>
+    <section className='Quote' style={entryStyle}>
+      <div id={anchor} style={anchorStyle}></div>
       <div className='leftPad_1'></div>
       <div id='whoweare' style={isQuote ? quoteContainerStyle : textContainerStyle}>
         <h1 style={isQuote ? quoteTitleStyleCentered : titleStyleCentered}>{title}</h1>

@@ -332,13 +332,20 @@ function renderDesktop(
   abstractContainerStyle,
   anchor) {
     console.log("Rendering desktop");
+
+    const anchorStyle = {
+      position: "relative" as "relative",
+      top: "-6rem",
+    };
+
     if (alignImageRight) {
       const padStyle = {
         backgroundColor: "#efe9e0",
         // backgroundColor: "#cedcd5",
       }
       return (
-        <div id={anchor} style={outerStyle}>
+        <div style={outerStyle}>
+          <div id={anchor} style={anchorStyle}></div>
           <section style={entryStyle}>
             <div className='leftPad' style={padStyle}></div>
             <div className="rowStyle" style={padStyle}>
@@ -358,7 +365,8 @@ function renderDesktop(
       );
     } else {
       return (
-        <div id={anchor} style={outerStyle}>
+        <div style={outerStyle}>
+          <div id={anchor} style={anchorStyle}></div>
           <section style={entryStyle}>
             <div className='leftPad'></div>
             <div className="rowStyle">

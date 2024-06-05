@@ -16,6 +16,7 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "astro": "^3.4.0",
+    "basicscroll": "^3.0.4",
     "contentful": "^10.6.3",
     "npm": "^10.2.4",
     "react": "^18.2.0",
