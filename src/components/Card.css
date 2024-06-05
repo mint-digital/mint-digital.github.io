@@ -1,27 +1,16 @@
-/* section { */
-  /* padding: 2rem;  */
-/* } */
-
 code {
   font-family: 'Lato';
   color: #9f5743;
 }
 
 .cardTextCell { 
-  /* padding: 5rem 7rem 5rem 7rem; */
-  /* padding: 6rem 6rem 6rem 6rem; */
-  /* padding: 4rem 0; */
   padding: 0rem;
-  /* padding: 4rem; */
 }
-
 
 .rowStyle {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* gap: 4rem; */
-  /* padding: 0rem 4rem; */
 }
 
 .cta-ball {
@@ -49,21 +38,10 @@ code {
 @media screen and (max-width: 700px) {				
   .cardTextCell {
     padding: 0rem;
-    /* padding: 4rem; */
   }
 
   .rowStyle {
-    /* display: flex; */
-    /* flex-direction: column; */
     justify-content: flex-start;
   }
-
-  /* .imgCellStyle {
-    position: relative;
-    object-fit: cover;
-    overflow: hidden;
-    transform-origin: center center;
-    object-position: 50% 50%;
-  } */
 }
 
