@@ -5,7 +5,7 @@ export default function Footer({
 }) {
   const entryStyle = {
     backgroundColor: footProps.backgroundColor.value,
-    padding: "0 0 60rem 0",
+    padding: "0 0 150rem 0",
     width: "100%",
   };
   

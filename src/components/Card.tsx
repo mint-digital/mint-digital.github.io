@@ -194,14 +194,12 @@ function renderMobile(
   imgStyle,
   image_url,
   anchor) {
-    console.log("Rendering mobile");
     const rowStyle = {
       display: "flex",
       flexDirection: "column" as "column",
       width: "100%",
       padding: "0rem",
     };
-    console.log(image_url);
 
     imgCellStyle.width = "100vw";
     imgCellStyle.height = "50vw";
@@ -254,7 +252,6 @@ function renderDesktop(
   ctaText,
   abstractContainerStyle,
   anchor) {
-    console.log("Rendering desktop");
 
     const anchorStyle = {
       position: "relative" as "relative",
