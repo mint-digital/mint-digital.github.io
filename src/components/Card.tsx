@@ -181,6 +181,11 @@ export default function Card({
   }
 }
 
+const anchorStyle = {
+  position: "relative" as "relative",
+  top: "-6rem",
+};
+
 function renderMobile(  
   outerStyle,
   entryStyle,
@@ -217,7 +222,8 @@ function renderMobile(
     txtCellStyle.margin = "0rem 4rem";
 
     return (<div style={outerStyle}>
-      <section id={anchor} style={entryStyle}>
+      <div id={anchor} style={anchorStyle}></div>
+      <section style={entryStyle}>
         <div className='leftPad'></div>
         <span className="rowStyle" style={rowStyle}>
           <div className="imgCellStyle" style={imgCellStyle}>
@@ -252,12 +258,6 @@ function renderDesktop(
   ctaText,
   abstractContainerStyle,
   anchor) {
-
-    const anchorStyle = {
-      position: "relative" as "relative",
-      top: "-6rem",
-    };
-
     if (alignImageRight) {
       const padStyle = {
         backgroundColor: "#efe9e0",
