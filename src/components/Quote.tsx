@@ -200,8 +200,9 @@ export default function Quote({
   };
 
 	return (
-    <section className='Quote' style={entryStyle}>
+    <section className='Quote' >
       <div id={anchor} style={anchorStyle}></div>
+      <div style={entryStyle}>
       <div className='leftPad_1'></div>
       <div id='whoweare' style={isQuote ? quoteContainerStyle : textContainerStyle}>
         <h1 style={isQuote ? quoteTitleStyleCentered : titleStyleCentered}>{title}</h1>
@@ -210,6 +211,7 @@ export default function Quote({
       </div>
       <div className='rightPad_1'></div>
       {isQuote &&  <img src='../img/lanner_20231116_0021_4000px_crop.jpg' style={groupImgStyle}></img> }
+      </div>
     </section>
 	);
 }

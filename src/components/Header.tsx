@@ -103,7 +103,7 @@ export default function Header({
     top: 0,
     width: "100%",
     zIndex: "1000",
-    background: "rgba(255,255,255, var(--opacity))",
+    background: "rgba(239, 233, 224, var(--opacity))", // TODO: Hårdkodad färg som borde plockas upp från variabel
     willChange: "background",
   };
 
