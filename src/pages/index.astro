@@ -1,7 +1,7 @@
 ---
 import Cards from "../components/Cards";
 import Team from "../components/Team";
-import Header from "../components/Header";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer";
 import { fetchCards, fetchTeam, fetchHeader, fetchFooter } from "../utils/contentful";
 
@@ -142,7 +142,7 @@ Vi rådger och hjälper företag att bli kundfokuserade">
 	</script>
 	<body>
 		<main>
-				<Header {...headProps} client:visible />
+				<Header {...headProps} />
 				<Cards {...cards} client:visible />
 				<Team {...team} client:visible />
 				<Footer {...footProps} client:visible />

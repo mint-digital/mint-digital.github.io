@@ -201,10 +201,11 @@ export default function Quote({
 
 	return (
     <section className='Quote' >
-      <div id={anchor} style={anchorStyle}></div>
+      { text && isQuote && <div id='whoweare' style={anchorStyle}></div> }
+      { !isQuote && <div id={anchor} style={anchorStyle}></div> }
       <div style={entryStyle}>
       <div className='leftPad_1'></div>
-      <div id='whoweare' style={isQuote ? quoteContainerStyle : textContainerStyle}>
+      <div style={isQuote ? quoteContainerStyle : textContainerStyle}>
         <h1 style={isQuote ? quoteTitleStyleCentered : titleStyleCentered}>{title}</h1>
         { text && isQuote &&  <div style={quoteStyle}>{documentToReactComponents(text, quoteOptions)}</div>}
         { text && !isQuote && <div style={paragraphStyle}>{documentToReactComponents(text, options)}</div>}
