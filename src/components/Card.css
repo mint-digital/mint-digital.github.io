@@ -15,10 +15,10 @@ code {
 
 .cta-ball {
   position: absolute;
-  right: 4rem;
+  right: 2rem;
   width: 9ch;
   padding: 2rem 1.25rem;
-  bottom: -5rem;
+  bottom: -10rem;
   rotate: 15deg;
   color: #efe9e0;
   background-color: #ab6c5b;
