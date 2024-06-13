@@ -27,11 +27,5 @@ export default function Cards({
     );
   });
 
-  const ulStyle = {
-    listStyleType: "none",
-    padding: "0",
-    margin: "0",
-    overflow: "hidden",
-  }
   return cs;
 }

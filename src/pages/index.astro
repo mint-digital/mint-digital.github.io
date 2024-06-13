@@ -4,6 +4,8 @@ import Team from "../components/Team";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer";
 import { fetchCards, fetchTeam, fetchHeader, fetchFooter } from "../utils/contentful";
+import Top from "../layouts/Top.astro";
+import NavBar from "../components/NavBar.astro";
 
 const cards = { 
 	cards: await fetchCards() 
@@ -123,29 +125,24 @@ Vi rådger och hjälper företag att bli kundfokuserade">
 				'--navHeight': {
 					from: '8rem',
 					to: '6rem'
-				}
-			}
-		});
-		navbarAnim.start();
-		const navbarHeight = basicScroll.create({
-			elem: document.querySelector('.navbar'),
-			from: '0',
-			to: '500px',
-			props: {
+				},
 				'--navSize': {
 					from: '6rem',
 					to: '4rem'
 				}
 			}
 		});
-		navbarHeight.start();
+		navbarAnim.start();
 	</script>
 	<body>
 		<main>
-				<Header {...headProps} />
-				<Cards {...cards} client:visible />
-				<Team {...team} client:visible />
-				<Footer {...footProps} client:visible />
+			<Top >
+				<NavBar slot="top_menu" />
+				<Header slot="header" {...headProps} />
+			</Top>
+			<Cards {...cards} client:visible />
+			<Team {...team} client:visible />
+			<Footer {...footProps} client:visible />
 		</main>
 	</body>
 </html>
