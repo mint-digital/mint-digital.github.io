@@ -1,0 +1,108 @@
+---
+import SubHeadline from './SubHeadline';
+const { bright, headProps } = Astro.props;
+---
+
+<div id='toprow'>
+  <div class="row-style">
+    <video id="background-video" class="video-style" autoplay loop muted playsinline >
+      <source src="../img/vid_2_flipped_xfade.mp4" type="video/mp4" />
+    </video>
+    <div class="txt-cell-style">
+      <h1 class="title-style">{headProps.headline}</h1>
+      <div class="sub-headline-style" >
+        <SubHeadline subHeadline={headProps.subHeadline} textColor={headProps.textColor.value}  client:visible />
+      </div>
+      <a href="#whoweare"><img src='../img/down-arrow-svgrepo-com_white.svg' class="arrow-style"></img></a>
+    </div>
+  </div>
+</div>
+
+<!-- Kanske se till så att detta inte ger ett globalt scope. -->
+<style is:global define:vars={{bgColor: headProps.backgroundColor.value, txtColor: headProps.textColor.value, bright: bright}}>
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #595959;
+    text-decoration: none;
+  }
+
+  .row-style {
+    background-color: var(--bgColor);
+    background-image: url(../img/drone_flight_reverse_xfade.png);
+    background-size: cover;
+    background-position: center bottom;
+    margin: 0;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  .video-style {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+    z-index: 1;
+    filter: brightness(var(--bright) + %);
+  }
+
+  .img-style {
+    display: inline;
+    left: 0;
+    width: var(--navSize);
+    padding: 1rem;
+    z-index: 100;
+    filter: drop-shadow(0 0 .25rem lightslategray);
+  }
+
+  .txt-cell-style {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100svh;
+    bottom: 0;
+    align-items: bottom;
+    text-align: center;
+    justify-content: flex-end;
+    z-index: 100;
+  }
+
+  .title-style {
+    align-self: center;
+    color: var(--txtColor);
+    margin: 0;
+    font-size: 5.75rem;
+    line-height: 5.75rem;
+    font-weight: 700;
+    font-style: bold;
+    max-width: 10ch;
+    filter: drop-shadow(0 0 .25rem lightslategray);
+  }
+
+  .sub-headline-style {
+    color: var(--txtColor);
+    margin: 2rem 1rem 15vh 1rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    filter: drop-shadow(0 0 .25rem lightslategray);
+  }
+
+  .arrow-style {
+    align-self: center;
+    position: absolute;
+    bottom: 1rem;
+    width: 2rem;
+    fill: white;
+  }
+</style>

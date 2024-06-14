@@ -1,85 +1,23 @@
 ---
 import Cards from "../components/Cards";
 import Team from "../components/Team";
-import Header from "../components/Header";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer";
 import { fetchCards, fetchTeam, fetchHeader, fetchFooter } from "../utils/contentful";
-//import { useMediaQuery } from 'react-responsive'
-//const isBigScreen = useMediaQuery({ query: '(min-width: 900px)' })
-//const isMediumScreen = useMediaQuery({ query: '(max-width: 700px)' })
-//const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-//const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
-
-//interface Big {
-//	size: "big"
-//}
-//interface Mid {
-//	size: "mid"
-//}
-//interface Small {
-//	size: "small"
-//}
-//
-//type ScreenSize = Big | Mid | Small;
-
-//const video = Astro.url.searchParams.get('video')! || '0';
-//const bright = Astro.url.searchParams.get('bright')! || '60';
+import Top from "../layouts/Top.astro";
+import NavBar from "../components/NavBar";
 
 const cards = { 
-	cards: await fetchCards() 
+  cards: await fetchCards() 
 };
 
-const team = { team: {
+const team = { 
+  team: {
 		textColor: "#efe9e0",
 		backgroundColor: "#86ad9e",
 		members:	await fetchTeam(),
 	} 
 };
-//const team = {
-//	team: {
-//		textColor: "#efe9e0",
-//		//backgroundColor: "#4f4f4e",
-//		backgroundColor: "#86ad9e",
-//		members: [
-//			{
-//				name: "Mats Saxer",
-//				title: "CEO",
-//				image_url: "http://images.ctfassets.net/8s1ond3x79i6/73AX9MjykPccABRvvvWi6V/79e7ba6672490419d1fca8999bfc36de/mats_saxer_profile.png",
-//				linkedin_url: "https://www.linkedin.com/in/saxer/",
-//			},
-//			{
-//				name: "Johan Burell",
-//				title: "Developer",
-//				image_url: "../img/Johan%20Burell%20-%20profil.png",
-//				linkedin_url: "https://www.linkedin.com/in/johanburell/",
-//			},
-//			{
-//				name: "Johan Burell",
-//				title: "Developer",
-//				image_url: "http://images.ctfassets.net/8s1ond3x79i6/73AX9MjykPccABRvvvWi6V/79e7ba6672490419d1fca8999bfc36de/mats_saxer_profile.png",
-//				linkedin_url: "https://www.linkedin.com/in/johanburell/",
-//			},
-//			{
-//				name: "Mats Saxer",
-//				title: "CEO",
-//				image_url: "http://images.ctfassets.net/8s1ond3x79i6/73AX9MjykPccABRvvvWi6V/79e7ba6672490419d1fca8999bfc36de/mats_saxer_profile.png",
-//				linkedin_url: "https://www.linkedin.com/in/saxer/",
-//			},
-//			{
-//				name: "Johan Burell",
-//				title: "Developer",
-//				image_url: "http://images.ctfassets.net/8s1ond3x79i6/73AX9MjykPccABRvvvWi6V/79e7ba6672490419d1fca8999bfc36de/mats_saxer_profile.png",
-//				linkedin_url: "https://www.linkedin.com/in/johanburell/",
-//			},
-//			{
-//				name: "Johan Burell",
-//				title: "Developer",
-//				image_url: "http://images.ctfassets.net/8s1ond3x79i6/73AX9MjykPccABRvvvWi6V/79e7ba6672490419d1fca8999bfc36de/mats_saxer_profile.png",
-//				linkedin_url: "https://www.linkedin.com/in/johanburell/",
-//			},
-//		]
-//	}
-//};
 
 const headProps = {
 	videoNumber: 0,
@@ -87,7 +25,6 @@ const headProps = {
 	headProps: await fetchHeader(),
 };
 const footProps = { footProps: await fetchFooter() };
-
 ---
 
 <html lang="en">
@@ -105,7 +42,6 @@ Vi rådger och hjälper företag att bli kundfokuserade" />
 		<meta property="og:image" content="https://mint.se/img/ogp_crop2.jpeg" />
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="http://www.mint.se">
-		<!-- <meta name="twitter:creator" content="@burre83"> -->
 		<meta name="twitter:title" content="Vi är Mint">
 		<meta name="twitter:description" content="Den nya expertbyrån med hjärtat på rätta stället.
 Vi rådger och hjälper företag att bli kundfokuserade">
@@ -143,7 +79,7 @@ Vi rådger och hjälper företag att bli kundfokuserade">
 				}
 			}
 
-			@media screen and (max-width: 900px),
+			@media screen and (max-width: 1080px),
 			screen and (max-height: 545px) {
 				html,
 				body {
@@ -151,7 +87,7 @@ Vi rådger och hjälper företag att bli kundfokuserade">
 				}
 			}
 
-			@media screen and (max-width: 600px),
+			@media screen and (max-width: 680px),
 			screen and (max-height: 345px) {
 				html,
 				body {
@@ -175,15 +111,50 @@ Vi rådger och hjälper företag att bli kundfokuserade">
 		</script>
 		<!-- End Matomo Code -->
 	</head>
-	<script></script>
+	<script>
+		import * as basicScroll from 'basicscroll';
+		const navbarAnim = basicScroll.create({
+			elem: document.querySelector('.navbar'),
+			from: '0',
+			to: '500px',
+			props: {
+				'--opacity': {
+					from: 0,
+					to: 1
+				},
+				'--navHeight': {
+					from: '8rem',
+					to: '6rem'
+				},
+				'--navSize': {
+					from: '6rem',
+					to: '4rem'
+				}
+			}
+		});
+		navbarAnim.start();
+		const burgerAnim = basicScroll.create({
+			elem: document.querySelector('.burger'),
+			from: '0',
+			to: '500px',
+			props: {
+				'--rotate': {
+					from: 0,
+					to: 90
+				},
+			}
+		});
+		burgerAnim.start();
+	</script>
 	<body>
-		<!-- <main style="display: flex; flex-direction: column; align-items: center"> -->
-		<!-- <main style="display: grid; grid-template-columns: auto 1800px auto;"> -->
 		<main>
-				<Header {...headProps} client:visible />
-				<Cards {...cards} client:visible />
-				<Team {...team} client:visible />
-				<Footer {...footProps} client:visible />
+			<Top >
+				<NavBar slot="top_menu" client:only/>
+				<Header slot="header" {...headProps} />
+			</Top>
+			<Cards {...cards} client:visible />
+			<Team {...team} client:visible />
+			<Footer {...footProps} client:visible />
 		</main>
 	</body>
 </html>
