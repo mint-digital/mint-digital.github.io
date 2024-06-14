@@ -8,10 +8,11 @@ import Top from "../layouts/Top.astro";
 import NavBar from "../components/NavBar";
 
 const cards = { 
-	cards: await fetchCards() 
+  cards: await fetchCards() 
 };
 
-const team = { team: {
+const team = { 
+  team: {
 		textColor: "#efe9e0",
 		backgroundColor: "#86ad9e",
 		members:	await fetchTeam(),
@@ -24,7 +25,6 @@ const headProps = {
 	headProps: await fetchHeader(),
 };
 const footProps = { footProps: await fetchFooter() };
-
 ---
 
 <html lang="en">

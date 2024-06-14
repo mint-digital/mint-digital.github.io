@@ -62,6 +62,7 @@ export default function NavBar() {
     right: 0,
     bottom: 0,
     flexDirection: "row" as "row",
+    paddingRight: "2rem",
   };
 
   const navLinkStyle = {
@@ -91,7 +92,7 @@ export default function NavBar() {
             <a href="#vision" style={navLinkStyle}>Vision</a>
             <a href="#omoss" style={navLinkStyle}>Om oss</a>
             <a href="#roller" style={navLinkStyle}>Roller</a>
-            <a href="https://mint-1712829496.teamtailor.com/" target="_blank" style={navLinkStyle}>Mint & Friends</a>
+            {/* <a href="https://friends.mint.se/" target="_blank" style={navLinkStyle}>Mint & Friends</a> */}
             <a href="#kompis" style={navLinkStyle}>Kontakt</a>
           </div>
         </div>
