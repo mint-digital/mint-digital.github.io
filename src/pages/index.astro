@@ -5,7 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer";
 import { fetchCards, fetchTeam, fetchHeader, fetchFooter } from "../utils/contentful";
 import Top from "../layouts/Top.astro";
-import NavBar from "../components/NavBar.astro";
+import NavBar from "../components/NavBar";
 
 const cards = { 
 	cards: await fetchCards() 
@@ -133,11 +133,23 @@ Vi rådger och hjälper företag att bli kundfokuserade">
 			}
 		});
 		navbarAnim.start();
+		const burgerAnim = basicScroll.create({
+			elem: document.querySelector('.burger'),
+			from: '0',
+			to: '500px',
+			props: {
+				'--rotate': {
+					from: 0,
+					to: 90
+				},
+			}
+		});
+		burgerAnim.start();
 	</script>
 	<body>
 		<main>
 			<Top >
-				<NavBar slot="top_menu" />
+				<NavBar slot="top_menu" client:only/>
 				<Header slot="header" {...headProps} />
 			</Top>
 			<Cards {...cards} client:visible />
