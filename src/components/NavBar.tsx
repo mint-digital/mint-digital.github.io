@@ -92,7 +92,7 @@ export default function NavBar() {
             <a href="#vision" style={navLinkStyle}>Vision</a>
             <a href="#omoss" style={navLinkStyle}>Om oss</a>
             <a href="#roller" style={navLinkStyle}>Roller</a>
-            {/* <a href="https://friends.mint.se/" target="_blank" style={navLinkStyle}>Mint & Friends</a> */}
+            <a href="https://friends.mint.se/" target="_blank" style={navLinkStyle}>Mint & Friends</a>
             <a href="#kompis" style={navLinkStyle}>Kontakt</a>
           </div>
         </div>
